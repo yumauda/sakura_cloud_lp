@@ -7,9 +7,21 @@
   letter-spacing: 0.05em;
   text-align: center;
   color: $black;
+  position: relative;
+
   @include mq("md") {
     font-size: rem(18);
   }
 }
-
-
+.c-main-text span {
+  position: relative;
+}
+.c-main-text span::before {
+  position: absolute;
+  content: '';
+  background: #8ECEA5;
+  height: rem(8);
+  left: 0;
+  right: 0;
+  bottom: rem(-4);
+}

@@ -219,6 +219,9 @@ select::-ms-expand {
 .p-cost__img {
   margin-top: 2.9375rem;
   position: relative;
+  max-width: 68.75rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .p-cost__img::before {
@@ -248,6 +251,9 @@ select::-ms-expand {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  max-width: 68.75rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 @media screen and (min-width: 768px) {
   .p-cost__note {
@@ -280,6 +286,67 @@ select::-ms-expand {
   font-weight: 500;
   line-height: 1.6;
   letter-spacing: 0.05em;
+  color: #000;
+}
+
+.p-cost__steps {
+  margin-top: 2.5rem;
+  display: grid;
+  gap: 1rem;
+  justify-items: center;
+}
+@media screen and (min-width: 768px) {
+  .p-cost__steps {
+    margin-top: 3.875rem;
+    grid-template-columns: repeat(3, 21.75rem);
+    justify-content: center;
+    gap: 1.125rem;
+  }
+}
+
+.p-cost__step {
+  width: 100%;
+  max-width: 21.75rem;
+  aspect-ratio: 1/1;
+  border-radius: 9999px;
+  background-color: #EFF7F0;
+  display: grid;
+  place-items: center;
+  padding: 1.5rem;
+}
+
+.p-cost__step-inner {
+  width: 100%;
+  display: grid;
+  justify-items: center;
+  gap: 0.5rem;
+}
+
+.p-cost__step-icon {
+  width: 7.5rem;
+  height: 7.5rem;
+  aspect-ratio: 120/120;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.p-cost__step-title {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.7;
+  letter-spacing: 0.05em;
+  text-align: center;
+  color: #286A36;
+}
+
+.p-cost__step-text {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.75;
+  letter-spacing: 0.05em;
+  text-align: center;
   color: #000;
 }
 
@@ -584,11 +651,26 @@ select::-ms-expand {
   letter-spacing: 0.05em;
   text-align: center;
   color: #000;
+  position: relative;
 }
 @media screen and (min-width: 768px) {
   .c-main-text {
     font-size: 1.125rem;
   }
+}
+
+.c-main-text span {
+  position: relative;
+}
+
+.c-main-text span::before {
+  position: absolute;
+  content: "";
+  background: #8ECEA5;
+  height: 0.5rem;
+  left: 0;
+  right: 0;
+  bottom: -0.25rem;
 }
 
 .c-main-title {
