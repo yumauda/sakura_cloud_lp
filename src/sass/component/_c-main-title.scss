@@ -1,0 +1,29 @@
+@use "../global" as *;
+
+.c-main-title {
+  font-size: rem(28);
+  font-weight: $bold;
+  line-height: 1.5;
+  letter-spacing: 0.05em;
+  text-align: center;
+  color: $black;
+
+  @include mq("md") {
+    font-size: rem(40);
+  }
+}
+
+.c-main-title span {
+  color: $main-color;
+  position: relative;
+}
+
+.c-main-title span::before {
+  position: absolute;
+  content: '';
+  background: $accent-color;
+  height: rem(8);
+  left: 0;
+  right: 0;
+  bottom: rem(-0);
+}
