@@ -7,10 +7,15 @@
 @use "./layout/_test";
 
 // Project
+@use "./project/_p-apply";
 @use "./project/_p-cost";
+@use "./project/_p-example";
+@use "./project/_p-faq";
 @use "./project/_p-header";
 @use "./project/_p-license";
 @use "./project/_p-mv";
+@use "./project/_p-now";
+@use "./project/_p-point";
 @use "./project/_p-site";
 
 // Component
