@@ -1047,18 +1047,29 @@ select::-ms-expand {
 
 .p-mv {
   overflow: hidden;
-  display: flex;
-  align-items: center;
-  margin-top: 5.75rem;
   position: relative;
   background: linear-gradient(to right, #FFFFFF 0%, #CCE9D4 67%, #62BD7B 100%);
-  aspect-ratio: 1440/640;
+  aspect-ratio: 375/700;
+  margin-top: 2.5rem;
+}
+@media screen and (min-width: 768px) {
+  .p-mv {
+    display: flex;
+    align-items: center;
+    margin-top: 5.75rem;
+    aspect-ratio: 1440/640;
+  }
 }
 
 .p-mv__img {
   position: absolute;
-  top: 0;
   left: 0;
+  top: -2.5rem;
+}
+@media screen and (min-width: 768px) {
+  .p-mv__img {
+    top: 0;
+  }
 }
 
 .p-mv__img img {
@@ -1095,22 +1106,31 @@ select::-ms-expand {
 
 .p-mv__lead-wrapper {
   text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+}
+@media screen and (min-width: 768px) {
+  .p-mv__lead-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .p-mv__lead {
-  font-size: 1rem;
   font-weight: 700;
   line-height: 1.75;
   letter-spacing: 0.05em;
   color: #286A36;
   display: block;
-  width: fit-content;
   position: relative;
   text-align: center;
   padding-bottom: 0.375rem;
+  font-size: 1.125rem;
+}
+@media screen and (min-width: 768px) {
+  .p-mv__lead {
+    width: fit-content;
+    font-size: 1rem;
+  }
 }
 
 .p-mv__lead::after {
@@ -1124,30 +1144,36 @@ select::-ms-expand {
 }
 
 .p-mv__label {
-  margin-top: 1.5rem;
   display: inline-flex;
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.25rem 1.5rem;
   background-color: #EFF7F0;
   border-radius: 0.5rem;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 700;
   line-height: 1.5;
   letter-spacing: 0.05em;
   color: #000;
+  margin-top: 1rem;
+  padding: 0.25rem 0.5625rem;
 }
 @media screen and (min-width: 768px) {
   .p-mv__label {
+    padding: 0.25rem 1.5rem;
+    margin-top: 1.5rem;
     font-size: 2.5rem;
   }
 }
 
 .p-mv__main {
-  margin-top: 2rem;
   position: relative;
-  padding-left: 2.3125rem;
+}
+@media screen and (min-width: 768px) {
+  .p-mv__main {
+    padding-left: 2.3125rem;
+    margin-top: 2rem;
+  }
 }
 
 .p-mv__main img {
@@ -1223,27 +1249,38 @@ select::-ms-expand {
 }
 
 .p-mv__catch {
-  margin-top: 1rem;
-  max-width: 35.25rem;
-  font-size: 1rem;
   font-weight: 700;
-  line-height: 1.75;
   letter-spacing: 0.05em;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
   color: #000;
+  overflow: hidden;
+  transition: 0.3s ease-in-out;
+  line-height: 1.6;
+  font-size: 0.875rem;
+  margin-top: 15rem;
+}
+@media screen and (min-width: 768px) {
+  .p-mv__catch {
+    line-height: 1.75;
+    font-size: 1rem;
+    margin-top: 1rem;
+    max-width: 35.25rem;
+  }
 }
 
 .p-mv__btn-wrapper {
   text-align: center;
-  margin-top: 1.5rem;
+  margin-top: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .p-mv__btn-wrapper {
+    margin-top: 1.5rem;
+  }
 }
 
 .p-mv__btn {
-  width: 100%;
-  max-width: 21.375rem;
-  height: 4rem;
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -1256,11 +1293,22 @@ select::-ms-expand {
   line-height: 1.7;
   letter-spacing: 0.05em;
   color: #000;
+  max-width: 15.125rem;
+  height: 3rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 @media screen and (min-width: 768px) {
   .p-mv__btn {
+    width: 100%;
+    max-width: 21.375rem;
+    height: 4rem;
     font-size: 1.5rem;
   }
+}
+
+.js-mv-lead {
+  opacity: 0;
 }
 
 .p-now {
