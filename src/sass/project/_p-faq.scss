@@ -1,12 +1,17 @@
 @use "../global" as *;
 
 .p-faq {
-  padding-top: rem(56);
+  padding-top: rem(24);
+
+  @include mq(md) {
+
+    padding-top: rem(56);
+  }
 }
 
 .p-faq__title {
   text-align: center;
-  font-size: rem(28);
+  font-size: rem(24);
   font-weight: $bold;
   line-height: 1.6;
   letter-spacing: 0.05em;
@@ -18,8 +23,13 @@
 }
 
 .p-faq__items {
-  margin-top: rem(56);
   border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  margin-top: rem(24);
+
+  @include mq(md) {
+    margin-top: rem(56);
+
+  }
 }
 
 .p-faq__item {
@@ -28,7 +38,7 @@
 }
 
 .p-faq__item+.p-faq__item {
-  margin-top: rem(20);
+  margin-top: rem(16);
 
   @include mq("md") {
     margin-top: rem(30);
@@ -41,12 +51,18 @@
 
 .p-faq__q {
   display: flex;
-  align-items: center;
-  gap: rem(24);
-  padding: rem(20) rem(24);
   border-bottom: 1px solid rgba($color: #000000, $alpha: 0.15);
   background-color: #F0F0F0;
   position: relative;
+  gap: rem(16);
+  padding: rem(16);
+  @include mq(md){
+    
+    padding: rem(20) rem(24);
+    align-items: center;
+    gap: rem(24);
+    
+  }
 }
 
 
@@ -56,12 +72,17 @@
 
 .p-faq__qa {
   font-family: "MuseoModerno", system-ui, -apple-system, "Segoe UI", sans-serif;
-  font-size: rem(24);
   font-weight: 600;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: $main-color;
   flex: 0 0 auto;
+  font-size: rem(20);
+
+  @include mq(md) {
+
+    font-size: rem(24);
+  }
 }
 
 .p-faq__qa--a {
@@ -79,13 +100,18 @@
 
 .p-faq__a {
   display: flex;
-  gap: rem(24);
-  padding: rem(24);
-  padding-top: rem(24);
-  padding-bottom: rem(24);
-  padding-left: rem(24);
-  padding-right: rem(166);
   background-color: #F0F0F0;
+  padding: rem(16);
+  gap: rem(16);
+
+  @include mq(md) {
+    gap: rem(24);
+    padding-bottom: rem(24);
+    padding-top: rem(24);
+    padding-left: rem(24);
+    padding-right: rem(166);
+
+  }
 }
 
 .p-faq__item--accent>.p-faq__a {

@@ -1,14 +1,20 @@
 @use "../global" as *;
 
 .p-apply {
-  padding-top: rem(72);
-  padding-bottom: rem(72);
+  padding-top: rem(40);
+  padding-bottom: rem(40);
+
+  @include mq(md) {
+    padding-top: rem(72);
+    padding-bottom: rem(72);
+
+  }
 }
 
 .p-apply__title {
   margin: 0;
   text-align: center;
-  font-size: rem(28);
+  font-size: rem(24);
   font-weight: $bold;
   line-height: 1.6;
   letter-spacing: 0.05em;
@@ -40,7 +46,7 @@
   position: relative;
   display: grid;
   gap: rem(8);
-  
+
   @include mq("md") {
     padding-top: rem(40);
     min-height: rem(282);
@@ -87,21 +93,28 @@
 
 .p-apply__num {
   position: absolute;
-  top: rem(-14);
   left: 50%;
   transform: translate(-50%, -50%);
-  width: rem(72);
-  height: rem(72);
   border-radius: 999px;
   background-color: #579E64;
   display: grid;
   place-items: center;
   color: $white;
   font-family: "MuseoModerno", system-ui, -apple-system, "Segoe UI", sans-serif;
-  font-size: rem(28);
   font-weight: 600;
   line-height: 1.5;
   letter-spacing: 0.02em;
+  font-size: rem(20);
+  width: rem(48);
+  height: rem(48);
+
+  @include mq(md){
+    top: rem(-14);
+    width: rem(72);
+    height: rem(72);
+    font-size: rem(28);
+    
+  }
 }
 
 .p-apply__step-title {
@@ -118,10 +131,14 @@
 }
 
 .p-apply__step-text {
-  font-size: rem(16);
   font-weight: 500;
   line-height: 1.75;
   letter-spacing: 0.05em;
   color: $black;
   text-align: left;
+  font-size: rem(14);
+  @include mq(md){
+    font-size: rem(16);
+    
+  }
 }

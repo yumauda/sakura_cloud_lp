@@ -2,9 +2,15 @@
 
 .p-point {
   position: relative;
-  padding-top: rem(72);
-  padding-bottom: rem(72);
   overflow: hidden;
+  padding-top: rem(40);
+  padding-bottom: rem(40);
+
+  @include mq(md) {
+    padding-top: rem(72);
+    padding-bottom: rem(72);
+
+  }
 }
 
 .p-point__bg {
@@ -24,14 +30,14 @@
 }
 
 .p-point__title {
-  font-size: rem(28);
+  font-size: rem(24);
   font-weight: $bold;
   line-height: 1.6;
   letter-spacing: 0.05em;
-  text-align: center;
   color: $white;
 
   @include mq("md") {
+    text-align: center;
     font-size: rem(32);
   }
 }
@@ -39,11 +45,16 @@
 .p-point__panel {
   margin-top: rem(40);
   position: relative;
-  padding: rem(64) rem(20) rem(24);
-  border-radius: rem(16);
+  padding-top: rem(80);
+  padding-bottom: rem(20);
+  padding-left: rem(16);
+  padding-right: rem(16);
   background-color: rgba(255, 255, 255, 0.7);
+  border-radius: rem(12);
+
 
   @include mq("md") {
+    border-radius: rem(16);
     padding-top: rem(104);
     padding-bottom: rem(40);
     padding-left: rem(60);
@@ -62,11 +73,18 @@
 
 .p-point__panel-badge {
   position: absolute;
-  top: rem(-48);
-  left: rem(-28);
-  width: rem(100);
-  height: rem(100);
   z-index: 1;
+  width: rem(56);
+  height: rem(56);
+  top: rem(-24);
+  left: rem(-16);
+  @include mq(md){
+    top: rem(-48);
+    left: rem(-28);
+    width: rem(100);
+    height: rem(100);
+    
+  }
 }
 
 .p-point__panel-badge img {

@@ -1,21 +1,38 @@
 @use "../global" as *;
 
 .p-site {
-  padding-top: rem(64);
-  padding-bottom: rem(40);
+  padding-top: rem(40);
+  padding-bottom: rem(24);
+
+  @include mq(md) {
+    padding-top: rem(64);
+    padding-bottom: rem(40);
+
+  }
 }
 
 .p-site__title-wrapper {
-  text-align: center;
+
+  @include mq(md) {
+    text-align: center;
+  }
 }
 
 
 .p-site__text {
-  margin-top: rem(24);
+  margin-top: rem(16);
+
+  @include mq(md) {
+    margin-top: rem(24);
+  }
 }
 
 .p-site__issues {
-  margin-top: rem(83);
+  margin-top: rem(32);
+
+  @include mq(md) {
+    margin-top: rem(83);
+  }
 }
 
 .p-site__issues-grid {
@@ -32,7 +49,7 @@
   background-color: #F0F0F0;
   border-radius: rem(24);
   position: relative;
-  padding: rem(52) rem(20) rem(32);
+  padding: rem(24) rem(16) rem(24);
   display: flex;
   flex-direction: column;
 
@@ -43,44 +60,63 @@
 
 .p-site__issue-quote {
   position: absolute;
-  top: rem(-27);
-  left: rem(20);
-  width: rem(80);
+  width: rem(32);
   height: auto;
+  top: rem(-16);
+  left: rem(16);
+
+  @include mq(md) {
+    left: rem(20);
+    top: rem(-27);
+
+    width: rem(80);
+  }
 }
 
 .p-site__issue-title {
   margin: 0;
-  font-size: rem(20);
   font-weight: $bold;
   line-height: 1.7;
   letter-spacing: 0.05em;
-  text-align: center;
   color: $main-color;
+  font-size: rem(18);
 
   @include mq("md") {
+    font-size: rem(20);
+    text-align: center;
     font-size: rem(24);
   }
 }
 
 .p-site__issue-list {
-  margin-top: rem(18);
   display: grid;
   flex: 1;
-  padding-left: rem(34);
-  padding-right: rem(34);
+  padding-left: rem(12);
+  padding-right: rem(12);
+  margin-top: rem(12);
+
+  @include mq(md) {
+    margin-top: rem(18);
+    padding-left: rem(34);
+    padding-right: rem(34);
+
+  }
 }
 
 .p-site__issue-item {
   display: flex;
   gap: rem(5);
-  align-items: center;
   font-size: rem(16);
   font-weight: 500;
   line-height: 1.75;
   letter-spacing: 0.05em;
   padding-left: rem(4);
   color: $black;
+
+  @include mq(md) {
+    align-items: center;
+
+  }
 }
 
 .p-site__issue-item::before {
@@ -90,24 +126,32 @@
   border-radius: 999px;
   background-color: $main-color;
   flex-shrink: 0;
+  margin-top: rem(11);
+
+  @include mq(md) {
+    margin-top: initial;
+  }
 }
 
 .p-site__issue-btn {
-  margin-top: rem(24);
+  margin-top: rem(16);
   background-color: $main-color;
   color: $white;
-  border-radius: rem(32);
-  padding: rem(8) rem(24);
   display: flex;
   justify-content: center;
   align-items: center;
   gap: rem(16);
-  font-size: rem(18);
   font-weight: $bold;
   line-height: 1.7;
   letter-spacing: 0.05em;
+  border-radius: rem(16);
+  font-size: rem(16);
+  padding: rem(8) rem(16);
 
   @include mq("md") {
+    padding: rem(8) rem(24);
+
+    border-radius: rem(32);
     margin-top: rem(32);
     font-size: rem(24);
     width: rem(465);

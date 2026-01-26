@@ -1,7 +1,7 @@
 @use "../global" as *;
 
 .c-main-title {
-  font-size: rem(28);
+  font-size: rem(24);
   font-weight: $bold;
   line-height: 1.5;
   letter-spacing: 0.05em;
@@ -26,4 +26,5 @@
   left: 0;
   right: 0;
   bottom: rem(-0);
+  z-index: -1;
 }

@@ -2,8 +2,14 @@
 
 .p-example {
   background-color: #F0F0F0;
-  padding-top: rem(72);
-  padding-bottom: rem(56);
+  padding-top: rem(40);
+  padding-bottom: rem(40);
+
+  @include mq("md") {
+    padding-top: rem(72);
+    padding-bottom: rem(56);
+
+  }
 }
 
 .p-example__title-wrapper {
@@ -11,21 +17,24 @@
 }
 
 .p-example__title {
-  font-size: rem(28);
+  font-size: rem(24);
   font-weight: $bold;
   line-height: 1.6;
   letter-spacing: 0.05em;
   color: $black;
+
   @include mq("md") {
     font-size: rem(32);
   }
 }
 
 .p-example__cards {
-  margin-top: rem(56);
   display: grid;
-  gap: rem(40);
+  gap: rem(24);
+  margin-top: rem(32);
+
   @include mq("md") {
+    margin-top: rem(56);
     grid-template-columns: repeat(3, 1fr);
     justify-content: center;
     gap: rem(36);
@@ -53,22 +62,30 @@
 }
 
 .p-example__head {
-  margin-top: rem(24);
   display: flex;
   flex-direction: column;
-  gap: rem(16);
+  margin-top: rem(16);
+  gap: rem(12);
+
   @include mq("md") {
+    gap: rem(16);
+    margin-top: rem(24);
     min-height: rem(156);
   }
 }
 
 .p-example__case-title {
   margin: 0;
-  font-size: rem(18);
   font-weight: $bold;
   line-height: 1.75;
   letter-spacing: 0.05em;
   color: $black;
+  font-size: rem(16);
+
+  @include mq(md) {
+    font-size: rem(18);
+
+  }
 }
 
 .p-example__company {
@@ -82,11 +99,16 @@
 }
 
 .p-example__body {
-  margin-top: rem(24);
-  padding-top: rem(24);
   display: grid;
-  gap: rem(16);
+  gap: rem(12);
   border-top: 1px solid #898989;
+  margin-top: rem(16);
+  padding-top: rem(16);
+  @include mq(md){
+    margin-top: rem(24);
+    padding-top: rem(24);
+    
+  }
 }
 
 .p-example__label {
@@ -118,9 +140,13 @@
 }
 
 .p-example__list {
-  margin-top: rem(16);
   display: grid;
   gap: rem(4);
+  margin-top: rem(12);
+  @include mq(md){
+    margin-top: rem(16);
+    
+  }
 }
 
 .p-example__item {
@@ -128,11 +154,14 @@
   gap: rem(5);
   align-items: flex-start;
   padding-left: rem(4);
-  font-size: rem(16);
+  font-size: rem(14);
   font-weight: 500;
   line-height: 1.75;
   letter-spacing: 0.05em;
   color: $black;
+  @include mq(md){
+    font-size: rem(16);
+  }
 }
 
 .p-example__item::before {
@@ -152,4 +181,3 @@
 .p-example__list--effect .p-example__item::before {
   background-color: $accent-color;
 }
-
