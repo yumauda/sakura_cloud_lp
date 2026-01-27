@@ -86,7 +86,7 @@
   letter-spacing: 0.05em;
   color: $black;
   font-size: rem(14);
-  margin-top: rem(13);
+  margin-top: rem(-13);
   @include mq(md) {
     margin-top: rem(-16);
     font-size: rem(20);
