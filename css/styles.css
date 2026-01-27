@@ -959,7 +959,7 @@ select::-ms-expand {
 }
 
 .p-license__text {
-  font-weight: 500;
+  font-weight: 500 !important;
   line-height: 1.75;
   letter-spacing: 0.05em;
   color: #000;
@@ -1116,7 +1116,7 @@ select::-ms-expand {
 }
 
 .p-mv__lead {
-  font-weight: 700;
+  font-weight: 700 !important;
   line-height: 1.75;
   letter-spacing: 0.05em;
   color: #286A36;
@@ -1289,7 +1289,7 @@ select::-ms-expand {
   background-color: #FFDF3F;
   box-shadow: 0.5rem 0.5rem 0 rgba(0, 0, 0, 0.1);
   font-size: 1.125rem;
-  font-weight: 700;
+  font-weight: 700 !important;
   line-height: 1.7;
   letter-spacing: 0.05em;
   color: #000;
@@ -1807,7 +1807,7 @@ select::-ms-expand {
 
 .c-main-text {
   font-size: 0.875rem;
-  font-weight: 500;
+  font-weight: 500 !important;
   line-height: 1.75;
   letter-spacing: 0.05em;
   color: #000;
