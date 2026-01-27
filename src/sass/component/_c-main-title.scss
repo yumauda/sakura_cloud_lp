@@ -16,6 +16,8 @@
 .c-main-title span {
   color: $main-color;
   position: relative;
+  --width: 0%;
+  display: inline-block;
 }
 
 .c-main-title span::before {
@@ -23,8 +25,9 @@
   content: '';
   background: $accent-color;
   height: rem(8);
-  left: 0;
-  right: 0;
+  // left: 0;
+  // right: 0;
   bottom: rem(-0);
   z-index: -1;
+  width: var(--width);
 }

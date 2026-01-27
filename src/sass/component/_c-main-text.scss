@@ -15,13 +15,14 @@
 }
 .c-main-text span {
   position: relative;
+  --width: 0%;
+  display: inline-block;
 }
 .c-main-text span::before {
   position: absolute;
   content: '';
   background: #8ECEA5;
   height: rem(8);
-  left: 0;
-  right: 0;
   bottom: rem(-4);
+  width: var(--width);
 }

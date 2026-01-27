@@ -1822,6 +1822,8 @@ select::-ms-expand {
 
 .c-main-text span {
   position: relative;
+  --width: 0%;
+  display: inline-block;
 }
 
 .c-main-text span::before {
@@ -1829,9 +1831,8 @@ select::-ms-expand {
   content: "";
   background: #8ECEA5;
   height: 0.5rem;
-  left: 0;
-  right: 0;
   bottom: -0.25rem;
+  width: var(--width);
 }
 
 .c-main-title {
@@ -1851,6 +1852,8 @@ select::-ms-expand {
 .c-main-title span {
   color: #286A36;
   position: relative;
+  --width: 0%;
+  display: inline-block;
 }
 
 .c-main-title span::before {
@@ -1858,8 +1861,7 @@ select::-ms-expand {
   content: "";
   background: #FFDF3F;
   height: 0.5rem;
-  left: 0;
-  right: 0;
   bottom: 0rem;
   z-index: -1;
+  width: var(--width);
 }
