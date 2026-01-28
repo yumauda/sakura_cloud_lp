@@ -1345,11 +1345,6 @@ select::-ms-expand {
 }
 
 .p-now__content {
-  background: url(../images/common/now-cta-bg.png);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  inset: 0;
   position: relative;
   text-align: center;
   margin-left: calc(50% - 50vw);
@@ -1358,9 +1353,19 @@ select::-ms-expand {
   padding-bottom: 2rem;
   padding-left: 1.25rem;
   padding-right: 1.25rem;
+  background: url(../images/common/now-cta-bg-sp.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  inset: 0;
 }
 @media screen and (min-width: 768px) {
   .p-now__content {
+    background: url(../images/common/now-cta-bg.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    inset: 0;
     padding-top: 2rem;
     padding-bottom: 2.3125rem;
     margin-left: initial;
@@ -1499,10 +1504,10 @@ select::-ms-expand {
   line-height: 1.6;
   letter-spacing: 0.05em;
   color: #fff;
+  text-align: center;
 }
 @media screen and (min-width: 768px) {
   .p-point__title {
-    text-align: center;
     font-size: 2rem;
   }
 }

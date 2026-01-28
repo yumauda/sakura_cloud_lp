@@ -11,12 +11,9 @@
 
   }
 }
+
 .p-now__content {
-  background: url(../images/common/now-cta-bg.png);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  inset: 0;
+
   position: relative;
   text-align: center;
   margin-left: calc(50% - 50vw);
@@ -25,22 +22,35 @@
   padding-bottom: rem(32);
   padding-left: rem(20);
   padding-right: rem(20);
-  @include mq(md){
+  background: url(../images/common/now-cta-bg-sp.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  inset: 0;
+
+  @include mq(md) {
+    background: url(../images/common/now-cta-bg.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    inset: 0;
     padding-top: rem(32);
     padding-bottom: rem(37);
     margin-left: initial;
     margin-right: initial;
     padding-left: initial;
     padding-right: initial;
-    
+
   }
 }
+
 .p-now__now {
   position: absolute;
   top: rem(-9);
   height: auto;
   width: rem(66);
   left: rem(20);
+
   @include mq(md) {
     left: rem(52);
     width: rem(89);
@@ -53,11 +63,13 @@
   width: rem(66);
   height: auto;
   left: rem(14);
+
   @include mq(md) {
     width: rem(89);
     left: rem(52);
   }
 }
+
 .p-now__now img {
   width: 100%;
   height: auto;
@@ -73,6 +85,7 @@
   line-height: 1.6;
   letter-spacing: 0.05em;
   color: $white;
+
   @include mq("md") {
     font-size: rem(32);
   }
@@ -86,6 +99,7 @@
   text-align: left;
   margin-top: rem(16);
   font-size: rem(16);
+
   @include mq("md") {
     text-align: center;
     margin-top: rem(32);
@@ -111,6 +125,7 @@
   line-height: 1.6;
   height: rem(48);
   max-width: rem(274);
+
   @include mq("md") {
     max-width: rem(342);
     height: rem(64);

@@ -36,8 +36,8 @@
   letter-spacing: 0.05em;
   color: $white;
 
+  text-align: center;
   @include mq("md") {
-    text-align: center;
     font-size: rem(32);
   }
 }
