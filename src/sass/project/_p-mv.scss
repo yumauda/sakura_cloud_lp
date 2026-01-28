@@ -1,31 +1,56 @@
 @use "../global" as *;
 
 .p-mv {
-  overflow: hidden;
   position: relative;
   background: linear-gradient(to right, #FFFFFF 0%, #CCE9D4 67%, #62BD7B 100%);
-  aspect-ratio: 375 / 700;
   margin-top: rem(40);
-  position: relative;
-
+  padding-top: rem(32);
+  padding-bottom: rem(24);
   @include mq(md) {
     display: flex;
     padding-top: rem(60);
     align-items: center;
     margin-top: rem(92);
-    aspect-ratio: 1440 / 640;
-
+    padding-bottom: rem(52);
   }
 }
 
-.p-mv__img {
+.p-mv::before {
   position: absolute;
-  left: 0;
-  top: rem(-40);
+  content: '';
+  background: url(../images/common/cloud.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  inset: 0;
+  z-index: 2;
+}
+.p-mv::after {
+  position: absolute;
+  content: '';
+  background: url(../images/common/mv_texture.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  inset: 0;
+  z-index: 1;
+}
 
+
+.p-mv__img {
+  max-width: rem(240);
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: rem(4);
+  position: relative;
+  z-index: 2;
   @include mq(md) {
-    top: 0;
-
+    max-width: rem(580);
+    margin-left: auto;
+    margin-right: initial;
+    margin-top: initial;
+    flex: 1;
+    margin-right: rem(-40);
   }
 }
 
@@ -36,29 +61,21 @@
   object-position: center center;
 }
 
-.p-mv__bg {
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-}
-
-.p-mv__bg::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(266deg, rgba(98, 189, 123, 1) 0%, rgba(204, 233, 212, 1) 67%, rgba(255, 255, 255, 1) 100%);
-  opacity: 0.9;
-}
-
-.p-mv__bg img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
 
 .p-mv__content {
-  max-width: rem(700);
   position: relative;
+  z-index: 2;
+  @include mq(md){
+    display: flex;    
+  }
+}
+
+.p-mv__detail {
+  width: 100%;
+
+  @include mq(md) {
+    max-width: rem(660);
+  }
 }
 
 .p-mv__lead-wrapper {
@@ -101,10 +118,6 @@
 }
 
 .p-mv__label {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  gap: rem(8);
   background-color: #EFF7F0;
   border-radius: rem(8);
   font-size: rem(20);
@@ -114,11 +127,25 @@
   color: $black;
   margin-top: rem(16);
   padding: rem(4) rem(9);
-
+  white-space: nowrap;
+  width: rem(325);
+  margin-left: auto;
+  margin-right: auto;
   @include mq("md") {
     padding: rem(4) rem(24);
     margin-top: rem(24);
-    font-size: min(rem(40), 5vw);
+    font-size: rem(40);
+    width: initial;
+    margin-left: initial;
+    margin-right: initial;
+  }
+}
+
+.p-mv__label span {
+  font-size: rem(16);
+
+  @include mq(md) {
+    font-size: rem(32);
   }
 }
 
@@ -212,7 +239,7 @@
   transition: 0.3s ease-in-out;
   line-height: 1.6;
   font-size: rem(14);
-  margin-top: rem(240);
+  margin-top: rem(8);
 
   @include mq(md) {
     line-height: 1.75;
@@ -234,7 +261,7 @@
 }
 
 .p-mv__btn {
-  display: inline-flex;
+  display: flex;
   justify-content: center;
   align-items: center;
   padding: rem(16) rem(24);
@@ -246,7 +273,7 @@
   line-height: 1.7;
   letter-spacing: 0.05em;
   color: $black;
-  max-width: rem(242);
+  max-width: rem(274);
   height: rem(48);
   margin-left: auto;
   margin-right: auto;

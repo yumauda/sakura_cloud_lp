@@ -1065,12 +1065,11 @@ select::-ms-expand {
 }
 
 .p-mv {
-  overflow: hidden;
   position: relative;
   background: linear-gradient(to right, #FFFFFF 0%, #CCE9D4 67%, #62BD7B 100%);
-  aspect-ratio: 375/700;
   margin-top: 2.5rem;
-  position: relative;
+  padding-top: 2rem;
+  padding-bottom: 1.5rem;
 }
 @media screen and (min-width: 768px) {
   .p-mv {
@@ -1078,18 +1077,48 @@ select::-ms-expand {
     padding-top: 3.75rem;
     align-items: center;
     margin-top: 5.75rem;
-    aspect-ratio: 1440/640;
+    padding-bottom: 3.25rem;
   }
 }
 
-.p-mv__img {
+.p-mv::before {
   position: absolute;
-  left: 0;
-  top: -2.5rem;
+  content: "";
+  background: url(../images/common/cloud.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  inset: 0;
+  z-index: 2;
+}
+
+.p-mv::after {
+  position: absolute;
+  content: "";
+  background: url(../images/common/mv_texture.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  inset: 0;
+  z-index: 1;
+}
+
+.p-mv__img {
+  max-width: 15rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0.25rem;
+  position: relative;
+  z-index: 2;
 }
 @media screen and (min-width: 768px) {
   .p-mv__img {
-    top: 0;
+    max-width: 36.25rem;
+    margin-left: auto;
+    margin-right: initial;
+    margin-top: initial;
+    flex: 1;
+    margin-right: -2.5rem;
   }
 }
 
@@ -1100,29 +1129,23 @@ select::-ms-expand {
   object-position: center center;
 }
 
-.p-mv__bg {
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-}
-
-.p-mv__bg::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(266deg, rgb(98, 189, 123) 0%, rgb(204, 233, 212) 67%, rgb(255, 255, 255) 100%);
-  opacity: 0.9;
-}
-
-.p-mv__bg img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
 .p-mv__content {
-  max-width: 43.75rem;
   position: relative;
+  z-index: 2;
+}
+@media screen and (min-width: 768px) {
+  .p-mv__content {
+    display: flex;
+  }
+}
+
+.p-mv__detail {
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .p-mv__detail {
+    max-width: 41.25rem;
+  }
 }
 
 .p-mv__lead-wrapper {
@@ -1165,10 +1188,6 @@ select::-ms-expand {
 }
 
 .p-mv__label {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
   background-color: #EFF7F0;
   border-radius: 0.5rem;
   font-size: 1.25rem;
@@ -1178,12 +1197,28 @@ select::-ms-expand {
   color: #000;
   margin-top: 1rem;
   padding: 0.25rem 0.5625rem;
+  white-space: nowrap;
+  width: 20.3125rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 @media screen and (min-width: 768px) {
   .p-mv__label {
     padding: 0.25rem 1.5rem;
     margin-top: 1.5rem;
-    font-size: min(2.5rem, 5vw);
+    font-size: 2.5rem;
+    width: initial;
+    margin-left: initial;
+    margin-right: initial;
+  }
+}
+
+.p-mv__label span {
+  font-size: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .p-mv__label span {
+    font-size: 2rem;
   }
 }
 
@@ -1280,7 +1315,7 @@ select::-ms-expand {
   transition: 0.3s ease-in-out;
   line-height: 1.6;
   font-size: 0.875rem;
-  margin-top: 15rem;
+  margin-top: 0.5rem;
 }
 @media screen and (min-width: 768px) {
   .p-mv__catch {
@@ -1302,7 +1337,7 @@ select::-ms-expand {
 }
 
 .p-mv__btn {
-  display: inline-flex;
+  display: flex;
   justify-content: center;
   align-items: center;
   padding: 1rem 1.5rem;
@@ -1314,7 +1349,7 @@ select::-ms-expand {
   line-height: 1.7;
   letter-spacing: 0.05em;
   color: #000;
-  max-width: 15.125rem;
+  max-width: 17.125rem;
   height: 3rem;
   margin-left: auto;
   margin-right: auto;
