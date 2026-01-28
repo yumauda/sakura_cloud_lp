@@ -1070,6 +1070,7 @@ select::-ms-expand {
   margin-top: 2.5rem;
   padding-top: 2rem;
   padding-bottom: 1.5rem;
+  overflow-x: clip;
 }
 @media screen and (min-width: 768px) {
   .p-mv {
@@ -1084,12 +1085,27 @@ select::-ms-expand {
 .p-mv::before {
   position: absolute;
   content: "";
-  background: url(../images/common/cloud.png);
+  z-index: 2;
+  background: url(../images/common/cloud_sp.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  inset: 0;
-  z-index: 2;
+  aspect-ratio: 375/700;
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+@media screen and (min-width: 768px) {
+  .p-mv::before {
+    position: absolute;
+    content: "";
+    background: url(../images/common/cloud.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    aspect-ratio: initial;
+    inset: 0;
+  }
 }
 
 .p-mv::after {
@@ -1190,15 +1206,14 @@ select::-ms-expand {
 .p-mv__label {
   background-color: #EFF7F0;
   border-radius: 0.5rem;
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   font-weight: 700;
   line-height: 1.5;
   letter-spacing: 0.05em;
   color: #000;
+  text-align: center;
   margin-top: 1rem;
   padding: 0.25rem 0.5625rem;
-  white-space: nowrap;
-  width: 20.3125rem;
   margin-left: auto;
   margin-right: auto;
 }
@@ -1210,6 +1225,7 @@ select::-ms-expand {
     width: initial;
     margin-left: initial;
     margin-right: initial;
+    white-space: nowrap;
   }
 }
 
@@ -1698,6 +1714,8 @@ select::-ms-expand {
 .p-site {
   padding-top: 2.5rem;
   padding-bottom: 1.5rem;
+  position: relative;
+  z-index: 4;
 }
 @media screen and (min-width: 768px) {
   .p-site {

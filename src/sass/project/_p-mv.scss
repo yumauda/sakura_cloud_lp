@@ -6,6 +6,8 @@
   margin-top: rem(40);
   padding-top: rem(32);
   padding-bottom: rem(24);
+  overflow-x: clip;
+
   @include mq(md) {
     display: flex;
     padding-top: rem(60);
@@ -18,13 +20,31 @@
 .p-mv::before {
   position: absolute;
   content: '';
-  background: url(../images/common/cloud.png);
+  // inset: 0;
+  z-index: 2;
+  background: url(../images/common/cloud_sp.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  inset: 0;
-  z-index: 2;
+  aspect-ratio: 375 / 700;
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+
+  @include mq(md) {
+    position: absolute;
+    content: '';
+    background: url(../images/common/cloud.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    aspect-ratio: initial;
+    inset: 0;
+
+
+  }
 }
+
 .p-mv::after {
   position: absolute;
   content: '';
@@ -44,6 +64,7 @@
   margin-top: rem(4);
   position: relative;
   z-index: 2;
+
   @include mq(md) {
     max-width: rem(580);
     margin-left: auto;
@@ -65,8 +86,9 @@
 .p-mv__content {
   position: relative;
   z-index: 2;
-  @include mq(md){
-    display: flex;    
+
+  @include mq(md) {
+    display: flex;
   }
 }
 
@@ -120,17 +142,17 @@
 .p-mv__label {
   background-color: #EFF7F0;
   border-radius: rem(8);
-  font-size: rem(20);
+  font-size: rem(18);
   font-weight: $bold;
   line-height: 1.5;
   letter-spacing: 0.05em;
   color: $black;
+  text-align: center;
   margin-top: rem(16);
   padding: rem(4) rem(9);
-  white-space: nowrap;
-  width: rem(325);
   margin-left: auto;
   margin-right: auto;
+
   @include mq("md") {
     padding: rem(4) rem(24);
     margin-top: rem(24);
@@ -138,6 +160,7 @@
     width: initial;
     margin-left: initial;
     margin-right: initial;
+    white-space: nowrap;
   }
 }
 

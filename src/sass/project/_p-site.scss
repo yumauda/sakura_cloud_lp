@@ -3,6 +3,8 @@
 .p-site {
   padding-top: rem(40);
   padding-bottom: rem(24);
+  position: relative;
+  z-index: 4;
 
   @include mq(md) {
     padding-top: rem(64);
