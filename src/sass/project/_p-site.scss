@@ -112,10 +112,14 @@
   letter-spacing: 0.05em;
   padding-left: rem(4);
   color: $black;
-
   @include mq(md) {
     align-items: center;
-
+  }
+}
+.p-site__issue-item + .p-site__issue-item {
+  margin-top: rem(4);
+  @include mq(md) {
+    margin-top: rem(8);
   }
 }
 

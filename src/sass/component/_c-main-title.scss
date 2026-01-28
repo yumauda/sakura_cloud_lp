@@ -5,10 +5,10 @@
   font-weight: $bold;
   line-height: 1.5;
   letter-spacing: 0.05em;
-  text-align: center;
   color: $black;
-
+  
   @include mq("md") {
+    text-align: center;
     font-size: rem(40);
   }
 }

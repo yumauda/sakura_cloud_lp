@@ -28,7 +28,7 @@
 .p-apply__steps {
   margin-top: rem(40);
   display: grid;
-  gap: rem(40);
+  gap: rem(72);
   position: relative;
 
   @include mq("md") {
@@ -44,7 +44,8 @@
   padding: rem(40) rem(16) rem(24);
   text-align: center;
   position: relative;
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: rem(8);
 
   @include mq("md") {
@@ -64,7 +65,7 @@
   height: auto;
   aspect-ratio: 15 / 40;
   object-fit: cover;
-  top: rem(-14);
+  top: rem(-68);
   transform: translateX(-50%) rotate(90deg);
   left: 50%;
 
@@ -88,7 +89,18 @@
 }
 
 .p-apply__step:last-child::before {
+  @include mq(md){
+    
+    display: none;
+  }
+}
+
+.p-apply__step:first-child::before {
   display: none;
+
+  @include mq(md) {
+    display: block;
+  }
 }
 
 .p-apply__num {
@@ -107,13 +119,14 @@
   font-size: rem(20);
   width: rem(48);
   height: rem(48);
+  top: rem(-4);
 
-  @include mq(md){
+  @include mq(md) {
     top: rem(-14);
     width: rem(72);
     height: rem(72);
     font-size: rem(28);
-    
+
   }
 }
 
@@ -137,8 +150,9 @@
   color: $black;
   text-align: left;
   font-size: rem(14);
-  @include mq(md){
+
+  @include mq(md) {
     font-size: rem(16);
-    
+
   }
 }

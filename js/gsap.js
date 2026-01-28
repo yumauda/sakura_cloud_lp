@@ -115,7 +115,7 @@ markers.forEach(marker => {
   gsap.to(marker, {
     duration: 1.5,
     delay: 0.7,
-    '--width': '100%',
+    '--width': '98%',
     ease: 'power2.inOut',
     scrollTrigger: {
       trigger: marker,

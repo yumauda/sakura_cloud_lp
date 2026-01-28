@@ -3,6 +3,7 @@
 .p-now {
   padding-top: rem(40);
   padding-bottom: rem(40);
+  overflow-x: clip;
 
   @include mq(md) {
     padding-top: rem(100);
@@ -10,100 +11,63 @@
 
   }
 }
-
-.p-now__cta {
+.p-now__content {
+  background: url(../images/common/now-cta-bg.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  inset: 0;
   position: relative;
-}
-
-.p-now__cta-bg {
-  overflow: hidden;
-  width: 100vw;
+  text-align: center;
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
-  @include mq(md){
-    width: 100%;
-    margin-left: initial;
-    margin-right: initial;
-  }
-}
-
-.p-now__cta-bg img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  aspect-ratio: 375 / 419;
-
-  @include mq(md) {
-    aspect-ratio: 1200 / 304;
-  }
-}
-
-.p-now__cta-inner {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: rem(24);
-  text-align: center;
   padding-top: rem(77);
   padding-bottom: rem(32);
-
-  @include mq(md) {
-    padding: rem(24);
-
+  padding-left: rem(20);
+  padding-right: rem(20);
+  @include mq(md){
+    padding-top: rem(32);
+    padding-bottom: rem(37);
+    margin-left: initial;
+    margin-right: initial;
+    padding-left: initial;
+    padding-right: initial;
+    
   }
 }
-
-.p-now__badge {
+.p-now__now {
   position: absolute;
   top: rem(-9);
   height: auto;
   width: rem(66);
-  left: rem(14);
-
+  left: rem(20);
   @include mq(md) {
     left: rem(52);
     width: rem(89);
   }
 }
 
-.p-now__badge img {
+.p-now__now {
+  position: absolute;
+  top: rem(-9);
+  width: rem(66);
+  height: auto;
+  left: rem(14);
+  @include mq(md) {
+    width: rem(89);
+    left: rem(52);
+  }
+}
+.p-now__now img {
   width: 100%;
   height: auto;
   object-fit: cover;
   object-position: center center;
 }
 
-.p-now__badge-text {
-  position: absolute;
-  inset: 0;
-  display: grid;
-  place-items: center;
-  font-weight: $bold;
-  line-height: 1.2;
-  letter-spacing: 0.05em;
-  color: $black;
-  font-size: rem(14);
-  margin-top: rem(-13);
-  @include mq(md) {
-    margin-top: rem(-16);
-    font-size: rem(20);
-  }
-}
 
-.p-now__badge-text span {
-  font-size: rem(20);
 
-  @include mq(md) {
-    font-size: rem(24);
-
-  }
-}
-
-.p-now__title {
-  margin: 0;
+.p-now__detail-title {
   font-size: rem(28);
   font-weight: $bold;
   line-height: 1.6;
@@ -114,30 +78,26 @@
   }
 }
 
-.p-now__text {
-  margin: 0;
-  font-size: rem(14);
+.p-now__detail-text {
   font-weight: $bold;
   line-height: 1.75;
   letter-spacing: 0.05em;
   color: $white;
   text-align: left;
+  margin-top: rem(16);
+  font-size: rem(16);
   @include mq("md") {
     text-align: center;
-    font-size: rem(16);
+    margin-top: rem(32);
   }
 }
 
-.p-now__body {
-  display: grid;
-  gap: rem(16);
-  justify-items: center;
-}
-
-.p-now__btn {
-  margin-top: rem(8);
+.p-now__detail-btn {
+  margin-top: rem(16);
   width: 100%;
-  display: inline-flex;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
   justify-content: center;
   align-items: center;
   padding: rem(16) rem(24);
@@ -156,5 +116,6 @@
     height: rem(64);
     line-height: 1.7;
     font-size: rem(24);
+    margin-top: rem(32);
   }
 }
