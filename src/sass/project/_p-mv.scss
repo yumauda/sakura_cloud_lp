@@ -300,6 +300,7 @@
   height: rem(48);
   margin-left: auto;
   margin-right: auto;
+  transition: 0.3s ease-in-out;
 
   @include mq("md") {
     width: 100%;
@@ -309,6 +310,10 @@
   }
 }
 
+.p-mv__btn:hover {
+  transform: translateY(4px);
+  box-shadow: none;
+}
 .js-mv-lead {
   opacity: 0;
 }
