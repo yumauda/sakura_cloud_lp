@@ -18,56 +18,67 @@
   <!-- ファビコン -->
   <link rel="icon" href="./images/common/favicon.ico" />
   <link rel="apple-touch-icon" sizes="180x180" href="./images/common/apple-touch-icon.png">
-  <!-- CSS (sassコマンドで自動生成) -->
+  
+
+  <!-- <link rel="stylesheet" href="https://gpu.sakura.ad.jp/resource/assets/styles/reset.css">
+  <link rel="stylesheet" href="https://gpu.sakura.ad.jp/resource/assets/styles/style.css"> -->
+  <link rel="stylesheet" href="https://gpu.sakura.ad.jp/common/css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=MuseoModerno:ital,wght@0,100..900;1,100..900&family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
   <!-- JavaScript -->
-  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-  <script defer src="./js/script.js"></script>
-  <!-- Vite Entry Point -->
-  <script type="module" crossorigin src="/js/index.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.1/dist/SplitText.min.js"></script>
+  <script defer src="./js/gsap.js?20260127"></script>
+  <script defer src="./js/script.js?20260127"></script>
   <link rel="stylesheet" crossorigin href="/css/style.css">
 </head>
 
 <body>
-  <header class="l-header p-header">
+  <!-- <?php include($_SERVER[‘DOCUMENT_ROOT’] . ‘/include/nav.html’); ?> -->
   
-  </header>
   <main>
     <section class="p-mv">
-      <div class="p-mv__bg">
-        <img decoding="async" loading="lazy" src="/images/mv.png" alt="" width="1440" height="640">
-      </div>
+     
       <div class="l-inner">
         <div class="p-mv__content">
-          <p class="p-mv__lead">ライセンス持ち込み不可・VMware値上げが加速する今、</p>
+          <div class="p-mv__detail">
+            <div class="p-mv__lead-wrapper js-mv-lead">
+              <p class="p-mv__lead">ライセンス持ち込み不可・<br class="u-mobile">VMware値上げが加速する今、</p>
+            </div>
+            <div class="p-mv__label js-mv-lead">ライセンス問題<span>と</span>クラウド移行<span>を</span></div>
+            <div class="p-mv__main js-mv-label">
+              <picture>
+                    <source srcset="/images/mv_title.png" media="(min-width: 768px)" width="1238" height="570"/>
+                    <img src="/images/mv_title_sp.png" alt="" width="355" height="227">
+              </picture>
+            </div>
+            <figure class="p-mv__img u-mobile">
+              <img src="/images/illust.png" alt="mv" width="1238" height="640">
+            </figure>
+            <p class="p-mv__catch">コンプライアンス違反の不安、移行作業の負荷、<br class="u-mobile">情報不足…。<br class="u-desktop">リソース不足の情シスの方、<br class="u-mobile">さくらのクラウドがサポートします。</p>
+            <div class="p-mv__btn-wrapper">
+              <a class="p-mv__btn" href="https://www.sakura.ad.jp/request_form/service/cloud/">
+                課題を相談する
+              </a>
 
-          <div class="p-mv__label">ライセンス問題とクラウド移行を</div>
-
-          <div class="p-mv__main">
-            <p class="p-mv__solve">解決</p>
-            <div class="p-mv__bubble">まとめて</div>
-            <p class="p-mv__suffix">します。</p>
+            </div>
           </div>
-
-          <p class="p-mv__catch">
-            コンプライアンス違反の不安、移行作業の負荷、情報不足…。<br class="u-desktop">
-            リソース不足の情シスの方、さくらのクラウドがサポートします。
-          </p>
-
-          <a class="p-mv__btn" href="#">
-            課題を相談する
-          </a>
+          <figure class="p-mv__img u-desktop">
+            <img src="/images/illust.png" alt="mv" width="1238" height="640">
+          </figure>
         </div>
+
       </div>
     </section>
     <section class="p-site">
       <div class="l-inner">
         <div class="p-site__content">
-          <div class="p-site__title-wrapper">
+          <div class="p-site__title-wrapper js-fade">
             <h2 class="p-site__title c-main-title">
-              <span>ライセンスコスト増</span>と<span>クラウド移行</span>は、<br class="u-desktop">
+              <span class="js-marker">ライセンスコスト増</span>と<span class="js-marker">クラウド移行</span>は、<br>
               もはや別々に考えられる問題ではありません。
             </h2>
             <p class="p-site__text c-main-text">
@@ -78,7 +89,7 @@
           </div>
           <div class="p-site__issues">
             <div class="p-site__issues-grid">
-              <div class="p-site__issue-card">
+              <div class="p-site__issue-card js-fade">
                 <img decoding="async" loading="lazy" class="p-site__issue-quote" src="data:image/svg+xml,%3csvg%20width='80'%20height='68'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M73.7327%200L80%2011.7972C73.9785%2015.1152%2069.4931%2018.8633%2066.5438%2023.0415C63.4716%2027.2197%2061.9355%2032.381%2061.9355%2038.5254L63.4101%2055.2996L53.4562%2042.212C54.9309%2040.9831%2056.5898%2039.9386%2058.4332%2039.0784C60.1536%2038.341%2061.9969%2037.9724%2063.9631%2037.9724C67.8955%2037.9724%2071.3364%2039.2627%2074.2857%2041.8433C77.235%2044.424%2078.7097%2047.8649%2078.7097%2052.1659C78.7097%2056.9586%2077.3579%2060.7066%2074.6544%2063.4102C71.828%2066.1137%2068.2642%2067.4655%2063.9631%2067.4655C58.0645%2067.4655%2053.6405%2065.3149%2050.6912%2061.0139C47.619%2056.7128%2046.0829%2050.6298%2046.0829%2042.765C46.0829%2033.3026%2048.4178%2024.9463%2053.0875%2017.6959C57.6344%2010.5684%2064.5161%204.66974%2073.7327%200ZM27.6497%200L34.1014%2011.7972C27.957%2015.1152%2023.4101%2018.8633%2020.4608%2023.0415C17.3886%2027.2197%2015.8525%2032.381%2015.8525%2038.5254L17.3272%2055.2996L7.37322%2042.212C8.84788%2040.9831%2010.5069%2039.9386%2012.3502%2039.0784C14.0706%2038.341%2015.9139%2037.9724%2017.8802%2037.9724C21.8126%2037.9724%2025.2534%2039.2627%2028.2027%2041.8433C31.152%2044.424%2032.6267%2047.8649%2032.6267%2052.1659C32.6267%2056.9586%2031.2749%2060.7066%2028.5714%2063.4102C25.745%2066.1137%2022.1812%2067.4655%2017.8802%2067.4655C11.9815%2067.4655%207.55756%2065.3149%204.60825%2061.0139C1.53605%2056.7128%20-5.35021e-05%2050.6298%20-5.35021e-05%2042.765C-5.35021e-05%2033.3026%202.33482%2024.9463%207.00456%2017.6959C11.5514%2010.5684%2018.4331%204.66974%2027.6497%200Z'%20fill='%23FFDF3F'/%3e%3c/svg%3e" alt="" width="80" height="68">
                 <h3 class="p-site__issue-title">
                   ライセンス体系の変化が「突然のコスト増」と<br class="u-desktop">
@@ -96,7 +107,7 @@
                 </a>
               </div>
 
-              <div class="p-site__issue-card">
+              <div class="p-site__issue-card js-fade">
                 <img decoding="async" loading="lazy" class="p-site__issue-quote" src="data:image/svg+xml,%3csvg%20width='80'%20height='68'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M73.7327%200L80%2011.7972C73.9785%2015.1152%2069.4931%2018.8633%2066.5438%2023.0415C63.4716%2027.2197%2061.9355%2032.3809%2061.9355%2038.5253L63.4101%2055.2995L53.4562%2042.212C54.9309%2040.9831%2056.5899%2039.9385%2058.4332%2039.0783C60.1536%2038.341%2061.9969%2037.9723%2063.9631%2037.9723C67.8955%2037.9723%2071.3364%2039.2627%2074.2857%2041.8433C77.235%2044.424%2078.7097%2047.8648%2078.7097%2052.1659C78.7097%2056.9585%2077.3579%2060.7066%2074.6544%2063.4101C71.828%2066.1137%2068.2642%2067.4654%2063.9631%2067.4654C58.0645%2067.4654%2053.6406%2065.3149%2050.6913%2061.0138C47.6191%2056.7127%2046.083%2050.6298%2046.083%2042.765C46.083%2033.3026%2048.4178%2024.9462%2053.0876%2017.6958C57.6344%2010.5684%2064.5161%204.66974%2073.7327%200ZM27.6498%200L34.1014%2011.7972C27.957%2015.1152%2023.4102%2018.8633%2020.4608%2023.0415C17.3886%2027.2197%2015.8525%2032.3809%2015.8525%2038.5253L17.3272%2055.2995L7.37328%2042.212C8.84793%2040.9831%2010.5069%2039.9385%2012.3502%2039.0783C14.0707%2038.341%2015.914%2037.9723%2017.8802%2037.9723C21.8126%2037.9723%2025.2535%2039.2627%2028.2028%2041.8433C31.1521%2044.424%2032.6267%2047.8648%2032.6267%2052.1659C32.6267%2056.9585%2031.275%2060.7066%2028.5714%2063.4101C25.745%2066.1137%2022.1813%2067.4654%2017.8802%2067.4654C11.9816%2067.4654%207.55762%2065.3149%204.60831%2061.0138C1.53611%2056.7127%207.64315e-06%2050.6298%207.64315e-06%2042.765C7.64315e-06%2033.3026%202.33488%2024.9462%207.00462%2017.6958C11.5515%2010.5684%2018.4332%204.66974%2027.6498%200Z'%20fill='%23FFDF3F'/%3e%3c/svg%3e" alt="" width="80" height="68">
                 <h3 class="p-site__issue-title">
                   解決策は分かっている。<br class="u-desktop">
@@ -115,7 +126,7 @@
               </div>
             </div>
           </div>
-          <div class="p-site__arrow">
+          <div class="p-site__arrow js-fade">
             <img decoding="async" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKoAAAB4BAMAAACQrnSVAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAbUExURUdwTI/PqY7NpY7NpI3No4/OpI7NpY/Po47OpTEcHYUAAAAIdFJOUwAbsN+FYu890wubHQAAAThJREFUaN7tmDEOwjAUQ4NU9i9uECZuQNcuiBEpVyh7pN4grSqOjdiAJm2S7272Aayq9ksiG0NRFEV9dLi8MArybXtsIaaj//3aBmE6d/8/4QRwtct/69Smz1hid6XpJNEi6BILPt4vVRHmR6q2msS6NA1Dtel1DbJbpWm/B7pB1k+EqsRGv3XQNAhQEUWwOceiA4CqRneSzDO8BYCqKkIaVE1ituQiGxCg1qLb73HrBim9zDMSG335G6HRHKn1RbB1LxoHALUQ3Umqn18tANSCIpSAmp+YNSoNCFDz0O21pjF0g6hdl4mN3gDUIEDdKoI1IDkAqKuJTWJwti0A1GQRdKCmErMGrAEB6lJ3AKiRxM5iKIqiKO6E3Am5E3In5E7InZA7IXdC7oTcCbkTcifkTsidkDthrt6RX9ol4HSz9AAAAABJRU5ErkJggg==" alt="矢印" width="85" height="60">
           </div>
         </div>
@@ -124,16 +135,16 @@
     <section class="p-license" id="license-solution">
       <div class="l-inner">
         <div class="p-license__content">
-          <div class="p-license__title-wrapper">
+          <div class="p-license__title-wrapper js-fade">
             <h3 class="p-license__title">ライセンス問題の解決策</h3>
           </div>
           <div class="p-license__body">
             <div class="p-license__text-area">
-              <h4 class="p-license__heading">
-                <span>コンプライアンスに準拠した</span><br class="u-desktop">
+              <h4 class="p-license__heading js-fade">
+                <span>コンプライアンスに準拠した</span><br>
                 クラウド運用を実現
               </h4>
-              <div class="p-license__texts">
+              <div class="p-license__texts js-fade">
                 <p class="p-license__text">
                   SPLAの提供制限やVMwareの価格改定により、これまで通りのクラウド・仮想基盤を使い続けることがライセンス違反や想定外のコスト増につながるケースが増えています。
                 </p>
@@ -145,12 +156,12 @@
                 </p>
               </div>
             </div>
-            <div class="p-license__img">
+            <div class="p-license__img js-fade">
               <img decoding="async" loading="lazy" src="/images/license-solution.png" alt="" width="560" height="373">
             </div>
           </div>
           <div class="p-license__cards">
-            <div class="p-license__card">
+            <div class="p-license__card js-fade">
               <h5 class="p-license__card-title">
                 ライセンス違反リスクを<br>
                 残さない
@@ -159,7 +170,7 @@
                 SPLAやOfficeを正規の提供形態で利用可能。「動いてはいるがライセンス的にグレー」という状態を解消し、監査・コンプライアンス面でも安心できる運用を実現します。
               </p>
             </div>
-            <div class="p-license__card">
+            <div class="p-license__card js-fade">
               <h5 class="p-license__card-title">
                 VMware値上げの影響を<br>
                 受けない基盤
@@ -168,7 +179,7 @@
                 さくらのクラウドは独自開発の仮想化基盤を採用。VMwareの価格改定や契約変更に左右されず、将来のコスト見通しを立てやすい環境へ移行できます。
               </p>
             </div>
-            <div class="p-license__card">
+            <div class="p-license__card js-fade">
               <h5 class="p-license__card-title">
                 既存環境を活かした<br>
                 段階的な移行
@@ -184,14 +195,14 @@
     <section class="p-cost p-cost--first">
       <div class="l-inner">
         <div class="p-cost__content">
-          <div class="p-cost__title-wrapper">
-            <h3 class="p-cost__title">オンプレミスとクラウドの<span>コスト比較シミュレーション</span></h3>
+          <div class="p-cost__title-wrapper js-fade">
+            <h3 class="p-cost__title">オンプレミスとクラウドの<br class="u-mobile"><span>コスト比較シミュレーション</span></h3>
           </div>
-          <div class="p-cost__text-wrapper">
-            <p class="c-main-text">同等の仮想環境を維持しながら、<span>5年間で約1,000万円以上のコスト削減が可能。</span><br>
+          <div class="p-cost__text-wrapper js-fade">
+            <p class="c-main-text">同等の仮想環境を維持しながら、<span class="js-marker">5年間で約1,000万円以上のコスト削減が可能。</span><br>
               VMware 値上げの影響を受けず、安定したクラウド基盤へ移行できます。</p>
           </div>
-          <figure class="p-cost__img">
+          <figure class="p-cost__img js-fade">
             <img decoding="async" loading="lazy" src="/images/cost.png" alt="コスト比較シミュレーション" width="1100" height="636">
           </figure>
           <div class="p-cost__note">
@@ -204,47 +215,44 @@
             </ul>
           </div>
         </div>
-        <section class="p-now">
-          <div class="l-inner">
-            <div class="p-now__content">
-              <div class="p-now__cta">
-                <div class="p-now__cta-bg">
-                  <img decoding="async" loading="lazy" src="/images/now-cta-bg.png" alt="" width="1200" height="304">
-                </div>
-                <div class="p-now__cta-inner">
-                  <div class="p-now__badge">
-                    <img decoding="async" loading="lazy" src="data:image/svg+xml,%3csvg%20width='89'%20height='123'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20clip-path='url(%23clip0_167_576)'%3e%3cpath%20d='M0%20123L44.5037%2096.8225L89%20123V0H0V123Z'%20fill='url(%23paint0_linear_167_576)'/%3e%3c/g%3e%3cdefs%3e%3clinearGradient%20id='paint0_linear_167_576'%20x1='44.5'%20y1='0'%20x2='44.5'%20y2='123'%20gradientUnits='userSpaceOnUse'%3e%3cstop%20stop-color='%23FFDF3F'/%3e%3cstop%20offset='1'%20stop-color='%23FFBC2B'/%3e%3c/linearGradient%3e%3cclipPath%20id='clip0_167_576'%3e%3crect%20width='89'%20height='123'%20fill='white'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e" alt="" width="89" height="123">
-                    <p class="p-now__badge-text">今すぐ<br>相談</p>
-                  </div>
-                  <div class="p-now__body">
-                    <h3 class="p-now__title">ライセンス関連のご相談はこちら</h3>
-                    <p class="p-now__text">
-                      SPLAライセンス、Office利用、VMware価格改定など、「現状のまま使い続けて問題ないのか？」を整理します。<br>環境情報が揃っていなくても大丈夫です。現状のヒアリングから始められます。
-                    </p>
-                    <a class="p-now__btn" href="#">
-                      最適構成を確認する
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
+        
+      </div>
+    </section>
+    
+    <section class="p-now js-fade">
+      <div class="l-inner">
+        <div class="p-now__content">
+          <div class="p-now__now">
+            <picture>
+              <source srcset="/images/now-cta-badge.png" media="(min-width: 768px)" width="89" height="123"/>
+              <img src="data:image/png;base64,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" alt="" width="66" height="78">
+            </picture>
           </div>
-        </section>
+          <div class="p-now__detail">
+            <h3 class="p-now__detail-title">ライセンス関連の<br class="u-mobile">ご相談はこちら</h3>
+            <p class="p-now__detail-text">
+              SPLAライセンス、Office利用、VMware価格改定など、「現状のまま使い続けて問題ないのか？」を整理します。<br class="u-desktop">環境情報が揃っていなくても大丈夫です。<br class="u-mobile">現状のヒアリングから始められます。
+            </p>
+            <a class="p-now__detail-btn" href="https://www.sakura.ad.jp/request_form/service/cloud/">
+              最適構成を確認する
+            </a>
+          </div>
+        </div>
       </div>
     </section>
     
     <section class="p-license" id="migration-solution">
       <div class="l-inner">
         <div class="p-license__content">
-          <div class="p-license__title-wrapper">
+          <div class="p-license__title-wrapper js-fade">
             <h3 class="p-license__title">移行課題の解決策</h3>
           </div>
           <div class="p-license__body">
             <div class="p-license__text-area">
-              <h4 class="p-license__heading">
-                移行も運用も<span>ワンストップ</span>でおまかせ
+              <h4 class="p-license__heading js-fade">
+                移行も運用も<br class="u-mobile"><span>ワンストップ</span>でおまかせ
               </h4>
-              <div class="p-license__texts">
+              <div class="p-license__texts js-fade">
                 <p class="p-license__text">
                   ライセンス問題の解決やクラウド移行は、方針を決めるだけでは前に進みません。
                 </p>
@@ -256,12 +264,12 @@
                 </p>
               </div>
             </div>
-            <div class="p-license__img">
+            <div class="p-license__img js-fade">
               <img decoding="async" loading="lazy" src="/images/license-onestop.png" alt="" width="560" height="373">
             </div>
           </div>
           <div class="p-license__cards">
-            <div class="p-license__card">
+            <div class="p-license__card js-fade">
               <h5 class="p-license__card-title">
                 人手不足でも、移行プロジェクトを前に進められる
               </h5>
@@ -269,7 +277,7 @@
                 移行計画の立案から設計・作業・検証までを担当。通常業務に追われる状況でも、プロジェクトを止めずに進めることができます。
               </p>
             </div>
-            <div class="p-license__card">
+            <div class="p-license__card js-fade">
               <h5 class="p-license__card-title">
                 ベンダー管理・<br>調整を一本化
               </h5>
@@ -277,7 +285,7 @@
                 クラウド、ライセンス、移行作業。複数ベンダーとの調整や責任切り分けは不要です。窓口を一本化することで、判断・確認の負担を減らします。
               </p>
             </div>
-            <div class="p-license__card">
+            <div class="p-license__card js-fade">
               <h5 class="p-license__card-title">
                 移行して終わりではなく、<br>運用まで継続支援
               </h5>
@@ -292,40 +300,40 @@
     <section class="p-cost">
       <div class="l-inner">
         <div class="p-cost__content">
-          <div class="p-cost__title-wrapper">
-            <h3 class="p-cost__title">さくらインターネットグループが、<br>移行計画から運用開始までを<span>一貫してサポート</span>します！</h3>
+          <div class="p-cost__title-wrapper js-fade">
+            <h3 class="p-cost__title">さくらインターネットグループが、<br class="u-desktop">移行計画から運用開始までを<span>一貫してサポート</span>します！</h3>
           </div>
-          <div class="p-cost__text-wrapper">
+          <div class="p-cost__text-wrapper js-fade">
             <p class="c-main-text">「相談した瞬間から、何をすればいいか分かる状態」まで並走します。<br>
-              移行の準備・判断・作業・運用まで、すべて段階的に進められるプロセスです。<br>担当者の業務負担を増やさず、<span>無理なく移行を推進できる進行設計になっています。</span></p>
+              移行の準備・判断・作業・運用まで、すべて段階的に進められるプロセスです。<br>担当者の業務負担を増やさず、<span class="js-marker">無理なく移行を推進できる進行設計になっています。</span></p>
           </div>
           <div class="p-cost__steps">
-            <div class="p-cost__step">
+            <div class="p-cost__step js-fade">
               <div class="p-cost__step-inner">
                 <img decoding="async" loading="lazy" class="p-cost__step-icon" src="/images/cost-step-survey.svg" alt="" width="120" height="120">
                 <h4 class="p-cost__step-title">現状調査・設計</h4>
                 <p class="p-cost__step-text">
-                  今の環境をヒアリングし、<br class="u-desktop">
+                  今の環境をヒアリングし、<br>
                   最適な構成を設計します
                 </p>
               </div>
             </div>
-            <div class="p-cost__step">
+            <div class="p-cost__step js-fade">
               <div class="p-cost__step-inner">
                 <img decoding="async" loading="lazy" class="p-cost__step-icon" src="/images/cost-step-migrate.svg" alt="" width="120" height="120">
                 <h4 class="p-cost__step-title">構築・データ移行</h4>
                 <p class="p-cost__step-text">
-                  面倒なデータ移行作業は、<br class="u-desktop">
+                  面倒なデータ移行作業は、<br>
                   当社のエンジニアが代行します
                 </p>
               </div>
             </div>
-            <div class="p-cost__step">
+            <div class="p-cost__step js-fade">
               <div class="p-cost__step-inner">
                 <img decoding="async" loading="lazy" class="p-cost__step-icon" src="/images/cost-step-support.svg" alt="" width="120" height="120">
                 <h4 class="p-cost__step-title">運用・サポート</h4>
                 <p class="p-cost__step-text">
-                  移行後も日本語サポートで<br class="u-desktop">
+                  移行後も日本語サポートで<br>
                   伴走します
                 </p>
               </div>
@@ -339,7 +347,7 @@
     <section class="p-example">
       <div class="l-inner">
         <div class="p-example__content">
-          <div class="p-example__title-wrapper">
+          <div class="p-example__title-wrapper js-fade">
             <h3 class="p-example__title">移行課題を解決した事例</h3>
           </div>
 
@@ -466,29 +474,24 @@
         </div>
       </div>
     </section>
-    <section class="p-now">
+    <section class="p-now js-fade">
       <div class="l-inner">
         <div class="p-now__content">
-          <div class="p-now__cta">
-            <div class="p-now__cta-bg">
-              <img decoding="async" loading="lazy" src="/images/now-cta-bg.png" alt="" width="1200" height="304">
-            </div>
-            <div class="p-now__cta-inner">
-              <div class="p-now__badge">
-                <img decoding="async" loading="lazy" src="data:image/svg+xml,%3csvg%20width='89'%20height='123'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20clip-path='url(%23clip0_167_576)'%3e%3cpath%20d='M0%20123L44.5037%2096.8225L89%20123V0H0V123Z'%20fill='url(%23paint0_linear_167_576)'/%3e%3c/g%3e%3cdefs%3e%3clinearGradient%20id='paint0_linear_167_576'%20x1='44.5'%20y1='0'%20x2='44.5'%20y2='123'%20gradientUnits='userSpaceOnUse'%3e%3cstop%20stop-color='%23FFDF3F'/%3e%3cstop%20offset='1'%20stop-color='%23FFBC2B'/%3e%3c/linearGradient%3e%3cclipPath%20id='clip0_167_576'%3e%3crect%20width='89'%20height='123'%20fill='white'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e" alt="" width="89" height="123">
-                <p class="p-now__badge-text">今すぐ<br>相談</p>
-              </div>
-              <div class="p-now__body">
-                <h3 class="p-now__title">移行計画・作業見積もりの相談はこちら</h3>
-                <p class="p-now__text">
-                  移行作業・検証・運用まで、自社メンバーの負担を最小限にする移行方法をご提案します。<br class="u-desktop">
-                  「何から始めればいいかわからない」「移行に失敗したくない」という段階でも、遠慮なくご相談ください。
-                </p>
-                <a class="p-now__btn" href="#">
-                  見積もりを依頼する
-                </a>
-              </div>
-            </div>
+          <div class="p-now__now">
+            <picture>
+              <source srcset="/images/now-cta-badge.png" media="(min-width: 768px)" width="89" height="123"/>
+              <img src="data:image/png;base64,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" alt="" width="66" height="78">
+            </picture>
+          </div>
+          <div class="p-now__detail">
+            <h3 class="p-now__detail-title">移行計画・作業見積もりの相談はこちら</h3>
+            <p class="p-now__detail-text">
+              移行作業・検証・運用まで、自社メンバーの負担を最小限にする移行方法をご提案します。<br class="u-desktop">
+              「何から始めればいいかわからない」「移行に失敗したくない」という段階でも、遠慮なくご相談ください。
+            </p>
+            <a class="p-now__detail-btn" href="https://www.sakura.ad.jp/request_form/service/cloud/">
+              見積もりを依頼する
+            </a>
           </div>
         </div>
       </div>
@@ -499,27 +502,27 @@
       </div>
       <div class="l-inner">
         <div class="p-point__content">
-          <h2 class="p-point__title">さくらのクラウドが選ばれるポイント</h2>
+          <h2 class="p-point__title js-fade">さくらのクラウドが<br class="u-mobile">選ばれるポイント</h2>
 
           <div class="p-point__panel">
-            <div class="p-point__panel-badge">
+            <div class="p-point__panel-badge js-big">
               <img decoding="async" loading="lazy" src="/images/point-badge-01.svg" alt="" width="100" height="100">
             </div>
-            <div class="p-point__panel-head">
+            <div class="p-point__panel-head js-fade">
               <p class="p-point__panel-head-text">３つの<span>お得な</span>ポイント</p>
             </div>
             <div class="p-point__items">
-              <div class="p-point__item">
+              <div class="p-point__item js-point-card">
                 <div class="p-point__num">01</div>
                 <h3 class="p-point__item-title minHeight-81">独自開発の仮想化基盤<br>によるコスト最適化</h3>
                 <p class="p-point__item-text">独自基盤のため、高額な商用ライセンス費用は不要。移行するだけで、インフラ維持コストの大幅な適正化に貢献します。</p>
               </div>
-              <div class="p-point__item">
+              <div class="p-point__item js-point-card">
                 <div class="p-point__num">02</div>
                 <h3 class="p-point__item-title minHeight-81">データ転送量が無料</h3>
                 <p class="p-point__item-text">データ転送量による従量課金がなく、時間割/ 日割/月額の一番安い料金が自動で適用。予想外のコスト増加の心配がありません。</p>
               </div>
-              <div class="p-point__item">
+              <div class="p-point__item js-point-card">
                 <div class="p-point__num">03</div>
                 <h3 class="p-point__item-title minHeight-81">為替の影響を受けない</h3>
                 <p class="p-point__item-text">請求は日本円で行われ、為替変動の影響を受けません。見通し立てやすい料金です。</p>
@@ -529,24 +532,24 @@
           </div>
 
           <div class="p-point__panel">
-            <div class="p-point__panel-badge">
+            <div class="p-point__panel-badge js-big">
               <img decoding="async" loading="lazy" src="/images/point-badge-02.svg" alt="" width="100" height="100">
             </div>
-            <div class="p-point__panel-head">
+            <div class="p-point__panel-head js-fade">
               <p class="p-point__panel-head-text">3つの<span>安全・安心</span>ポイント</p>
             </div>
             <div class="p-point__items">
-              <div class="p-point__item">
+              <div class="p-point__item js-point-card">
                 <div class="p-point__num">01</div>
                 <h3 class="p-point__item-title">データ主権を確保</h3>
                 <p class="p-point__item-text">データは国内自社データセンター（東京・石狩）で日本の法規制に準拠し管理され、データ主権の確保と高い信頼性を提供します。</p>
               </div>
-              <div class="p-point__item">
+              <div class="p-point__item js-point-card">
                 <div class="p-point__num">02</div>
                 <h3 class="p-point__item-title">ISMAP認証を取得済み</h3>
                 <p class="p-point__item-text">政府機関が定める最高水準のセキュリティ要件に準拠し、 エンタープライズ企業の機密データも安全に守ります。</p>
               </div>
-              <div class="p-point__item">
+              <div class="p-point__item js-point-card">
                 <div class="p-point__num">03</div>
                 <h3 class="p-point__item-title">柔軟な導入とサポート体制</h3>
                 <p class="p-point__item-text">現在お使いの利用機能を代替するさまざま機能によりスムーズな導入が可能。専門チームによる導入・運用サポートもご提供します。</p>
@@ -560,31 +563,31 @@
     <section class="p-apply">
       <div class="l-inner">
         <div class="p-apply__content">
-          <h2 class="p-apply__title">お申し込みの流れ</h2>
+          <h2 class="p-apply__title js-fade">お申し込みの流れ</h2>
           <div class="p-apply__steps">
             
 
-            <div class="p-apply__step">
+            <div class="p-apply__step js-fade">
               <div class="p-apply__num">01</div>
               <h3 class="p-apply__step-title">ご相談</h3>
               <p class="p-apply__step-text">まずは、現在の環境やお困りごとを簡単に共有いただきます。</p>
             </div>
-            <div class="p-apply__step">
+            <div class="p-apply__step js-fade">
               <div class="p-apply__num">02</div>
               <h3 class="p-apply__step-title">アセスメント申込・実施</h3>
               <p class="p-apply__step-text">専門チームが移行元環境を調査し、移行の可否や最適な移行方法を判断します。必要なリソース・コストを試算します。</p>
             </div>
-            <div class="p-apply__step">
+            <div class="p-apply__step js-fade">
               <div class="p-apply__num">03</div>
               <h3 class="p-apply__step-title">移行計画・お見積り提示</h3>
               <p class="p-apply__step-text">アセスメント結果をもとに、ライセンス構成・移行方式・スケジュール・費用を明確にご提示します。</p>
             </div>
-            <div class="p-apply__step">
+            <div class="p-apply__step js-fade">
               <div class="p-apply__num">04</div>
               <h3 class="p-apply__step-title">移行作業実施の<br>申込・準備</h3>
               <p class="p-apply__step-text">移行を決定された場合、正式にお申し込みいただき、移行準備を進めます。</p>
             </div>
-            <div class="p-apply__step">
+            <div class="p-apply__step js-fade">
               <div class="p-apply__num">05</div>
               <h3 class="p-apply__step-title">本番移行・検収・<br>運用開始</h3>
               <p class="p-apply__step-text">専門チームがリモートでデータ移行を実施し、検収後に運用を開始します。</p>
@@ -596,9 +599,9 @@
     <section class="p-faq">
       <div class="l-inner">
         <div class="p-faq__content">
-          <h2 class="p-faq__title">よくあるご質問</h2>
+          <h2 class="p-faq__title js-fade">よくあるご質問</h2>
           <div class="p-faq__items">
-            <div class="p-faq__item">
+            <div class="p-faq__item js-fade">
               <div class="p-faq__q">
                 <span class="p-faq__qa">Q</span>
                 <p class="p-faq__q-text">なぜさくらのクラウドはVMwareライセンス高騰の影響を受けないのですか？</p>
@@ -608,19 +611,39 @@
                 <p class="p-faq__a-text">さくらのクラウドでは、VMware製品を使用せず、自社開発の仮想化基盤を採用しているため、VMwareライセンスの高騰や突然のライセンス変更の影響を一切受けません。安心してクラウド環境をご利用いただけます。</p>
               </div>
             </div>
+            <div class="p-faq__item p-faq__item--accent js-fade">
+              <div class="p-faq__q">
+                <span class="p-faq__qa">Q</span>
+                <p class="p-faq__q-text">現在使っているMicrosoft Officeは移行後も使えますか？</p>
+              </div>
+              <div class="p-faq__a">
+                <span class="p-faq__qa p-faq__qa--a">A</span>
+                <p class="p-faq__a-text">はい、使えます。<br>さくらインターネットは正規代理店を通じてSPLAライセンスを提供しており、Windows Server、Office、RDS SALなどを<br>サービスの一部としてもご利用いただけます。</p>
+              </div>
+            </div>
 
-            <div class="p-faq__item">
+            <div class="p-faq__item js-fade">
               <div class="p-faq__q">
                 <span class="p-faq__qa">Q</span>
                 <p class="p-faq__q-text">自社で所有しているMicrosoftライセンスを持ち込むことはできますか？</p>
               </div>
               <div class="p-faq__a">
                 <span class="p-faq__qa p-faq__qa--a">A</span>
-                <p class="p-faq__a-text">はい、可能です。<br><br>他の多くのクラウドベンダーではライセンス持ち込みができなくなっている中、さくらのクラウドではお客様が所有するMicrosoft 365等のサブスクリプションライセンスやソフトウェアアシュアランス付き永続ライセンスの持ち込みが可能です。</p>
+                <p class="p-faq__a-text">はい、可能です。<br>他の多くのクラウドベンダーではライセンス持ち込みができなくなっている中、さくらのクラウドではお客様が所有するMicrosoft 365等のサブスクリプションライセンスやソフトウェアアシュアランス付き永続ライセンスの持ち込みが可能です。</p>
+              </div>
+            </div>
+            <div class="p-faq__item p-faq__item--accent js-fade">
+              <div class="p-faq__q">
+                <span class="p-faq__qa">Q</span>
+                <p class="p-faq__q-text">移行にはどのくらいの期間がかかりますか？</p>
+              </div>
+              <div class="p-faq__a">
+                <span class="p-faq__qa p-faq__qa--a">A</span>
+                <p class="p-faq__a-text">アセスメント申込から移行完了まで、最短で約1ヶ月〜規模により2〜3ヶ月程度です。<br>スケジュールはご希望に沿って調整可能です。</p>
               </div>
             </div>
 
-            <div class="p-faq__item">
+            <div class="p-faq__item js-fade">
               <div class="p-faq__q">
                 <span class="p-faq__qa">Q</span>
                 <p class="p-faq__q-text">小規模な環境でも対応してもらえますか？</p>
@@ -631,59 +654,103 @@
               </div>
             </div>
 
-            <div class="p-faq__item p-faq__item--accent">
-              <div class="p-faq__q">
-                <span class="p-faq__qa">Q</span>
-                <p class="p-faq__q-text">現在使っているMicrosoft Officeは移行後も使えますか？</p>
-              </div>
-              <div class="p-faq__a">
-                <span class="p-faq__qa p-faq__qa--a">A</span>
-                <p class="p-faq__a-text">はい、使えます。<br><br>さくらインターネットは正規代理店を通じてSPLAライセンスを提供しており、Windows Server、Office、RDS SALなどを<br><br>サービスの一部としてもご利用いただけます。</p>
-              </div>
-            </div>
-
-            <div class="p-faq__item p-faq__item--accent">
-              <div class="p-faq__q">
-                <span class="p-faq__qa">Q</span>
-                <p class="p-faq__q-text">移行にはどのくらいの期間がかかりますか？</p>
-              </div>
-              <div class="p-faq__a">
-                <span class="p-faq__qa p-faq__qa--a">A</span>
-                <p class="p-faq__a-text">アセスメント申込から移行完了まで、最短で約1ヶ月〜規模により2〜3ヶ月程度です。<br>スケジュールはご希望に沿って調整可能です。</p>
-              </div>
-            </div>
           </div>
         </div>
       </div>
     </section>
-    <section class="p-now">
+    <section class="p-now js-fade">
       <div class="l-inner">
         <div class="p-now__content">
-          <div class="p-now__cta">
-            <div class="p-now__cta-bg">
-              <img decoding="async" loading="lazy" src="/images/now-cta-bg.png" alt="" width="1200" height="304">
-            </div>
-            <div class="p-now__cta-inner">
-              <div class="p-now__badge">
-                <img decoding="async" loading="lazy" src="data:image/svg+xml,%3csvg%20width='89'%20height='123'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cg%20clip-path='url(%23clip0_167_576)'%3e%3cpath%20d='M0%20123L44.5037%2096.8225L89%20123V0H0V123Z'%20fill='url(%23paint0_linear_167_576)'/%3e%3c/g%3e%3cdefs%3e%3clinearGradient%20id='paint0_linear_167_576'%20x1='44.5'%20y1='0'%20x2='44.5'%20y2='123'%20gradientUnits='userSpaceOnUse'%3e%3cstop%20stop-color='%23FFDF3F'/%3e%3cstop%20offset='1'%20stop-color='%23FFBC2B'/%3e%3c/linearGradient%3e%3cclipPath%20id='clip0_167_576'%3e%3crect%20width='89'%20height='123'%20fill='white'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e" alt="" width="89" height="123">
-                <p class="p-now__badge-text">今すぐ<br>相談</p>
-              </div>
-              <div class="p-now__body">
-                <h3 class="p-now__title">ライセンスやクラウド移行について<br>
-                  お悩みの方はご相談ください</h3>
-                <p class="p-now__text">
-                  ライセンス更改やVMware値上げへの対応にお困りの企業様に、最適な選択肢をご提案します。<br class="u-desktop">移行の可否判断から費用試算まで、まずはお気軽にご相談ください。
-                  
-                </p>
-                <a class="p-now__btn" href="#">
-                  無料相談を申し込む
-                </a>
-              </div>
-            </div>
+          <div class="p-now__now">
+            <picture>
+              <source srcset="/images/now-cta-badge.png" media="(min-width: 768px)" width="89" height="123"/>
+              <img src="data:image/png;base64,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" alt="" width="66" height="78">
+            </picture>
+          </div>
+          <div class="p-now__detail">
+            <h3 class="p-now__detail-title">ライセンスや<br class="u-mobile">クラウド移行について<br>
+              お悩みの方は<br class="u-mobile">ご相談ください</h3>
+            <p class="p-now__detail-text">
+              ライセンス更改やVMware値上げへの対応にお困りの企業様に、最適な選択肢をご提案します。<br class="u-desktop">移行の可否判断から費用試算まで、まずはお気軽にご相談ください。
+              
+            </p>
+            <a class="p-now__detail-btn" href="https://www.sakura.ad.jp/request_form/service/cloud/">
+              無料相談を申し込む
+            </a>
           </div>
         </div>
       </div>
     </section>
   </main>
+  <!-- <?php include($_SERVER[‘DOCUMENT_ROOT’] . ‘/include/footer.html’); ?> -->
+  <!-- <footer class="globalfooter">
+    <div class="globalfooter-main">
+      <div class="globalfooter-layout">
+        <a href="https://www.sakura.ad.jp/" class="globalfooter-logo">
+          <svg role="img" aria-label="さくらインターネット" viewBox="0 0 236 62">
+            <use xlink:href="/resource/assets/images/logo-white.svg#logo"></use>
+          </svg>
+        </a>
+        <nav class="global-sitemap">
+          <dl class="global-sitemap-column">
+            <dt class="global-sitemap-title">サービス</dt>
+            <dd>
+              <ul class="global-sitemap-menu">
+                <li><a href="https://www.sakura.ad.jp/services/" class="global-sitemap-link">サービス一覧</a></li>
+                <li><a href="https://case.sakura.ad.jp/" class="global-sitemap-link">導入事例</a></li>
+              </ul>
+            </dd>
+          </dl>
+          <dl class="global-sitemap-column">
+            <dt class="global-sitemap-title">サポート</dt>
+            <dd>
+              <ul class="global-sitemap-menu">
+                <li><a href="https://help.sakura.ad.jp/" class="global-sitemap-link">サポートサイト</a></li>
+                <li><a href="https://help.sakura.ad.jp/status/" class="global-sitemap-link">メンテナンス・<br class="for-sp">障害情報</a></li>
+                <li><a href="https://help.sakura.ad.jp/contact/" class="global-sitemap-link">お問い合わせ</a></li>
+              </ul>
+            </dd>
+          </dl>
+          <dl class="global-sitemap-column">
+            <dt class="global-sitemap-title">会社情報</dt>
+            <dd>
+              <ul class="global-sitemap-menu">
+                <li><a href="https://www.sakura.ad.jp/corporate/" class="global-sitemap-link">企業情報</a></li>
+                <li><a href="https://www.sakura.ad.jp/corporate/ir/" class="global-sitemap-link">IR情報</a></li>
+                <li><a href="https://www.sakura.ad.jp/corporate/information/" class="global-sitemap-link">お知らせ・ニュースリリース</a></li>
+                <li><a href="https://www.sakura.ad.jp/media/" class="global-sitemap-link">メディア・SNS一覧</a></li>
+                <li><a href="https://www.sakura.ad.jp/recruit/" class="global-sitemap-link">採用情報</a></li>
+              </ul>
+            </dd>
+          </dl>
+        </nav>
+        <figure class="globalfooter-mark">
+          <ul class="globalfooter-mark-list">
+            <li class="globalfooter-mark-item">
+              <a href="https://privacymark.jp/" target="_blank" class="globalfooter-mark-link"><img class="p-mark" src="/resource/assets/images/fimg_p-mark.png" alt="プライバシーマーク" loading="lazy"></a>
+            </li>
+            <li class="globalfooter-mark-item">
+              <img class="pci-dss" src="/resource/assets/images/fimg_pci-dss.png" alt="PCI DSS監査証明マーク" loading="lazy">
+            </li>
+            <li class="globalfooter-mark-item">
+              <a href="https://www.sakura.ad.jp/corporate/security/policy/" target="_blank" class="globalfooter-mark-link"><img class="iso-mark" src="/resource/assets/images/fimg_iso-mark.gif" alt="ISO27001認証マーク" loading="lazy"></a>
+            </li>
+          </ul>
+        </figure>
+      </div>
+    </div>
+    <div class="globalfooter-legal">
+      <div class="globalfooter-layout">
+        <ul class="globalfooter-legal-list">
+          <li><a href="https://www.sakura.ad.jp/corporate/external/" class="global-sitemap-link globalfooter-legal-link">利用者情報の外部送信について</a></li>
+          <li><a href="https://www.sakura.ad.jp/corporate/privacy/" class="global-sitemap-link globalfooter-legal-link">個人情報保護ポリシー</a></li>
+          <li><a href="https://www.sakura.ad.jp/corporate/security/policy/" class="global-sitemap-link globalfooter-legal-link">情報セキュリティ基本方針</a></li>
+          <li><a href="https://www.sakura.ad.jp/corporate/agreement/" class="global-sitemap-link globalfooter-legal-link">サービス約款</a></li>
+          <li><a href="https://www.sakura.ad.jp/brand-assets/" class="global-sitemap-link globalfooter-legal-link">ブランドガイドライン</a></li>
+        </ul>
+        <p class="globalfooter-legal-copyright">&copy; SAKURA internet Inc.</p>
+      </div>
+    </div>
+  </footer> -->
 </body>
 </html>

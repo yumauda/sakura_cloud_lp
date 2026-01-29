@@ -23,28 +23,28 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     return false;
   });
 
-  //ドロワーメニュー
-  $("#MenuButton").click(function () {
-    // $(".l-drawer-menu").toggleClass("is-show");
-    // $(".p-drawer-menu").toggleClass("is-show");
-    $(".js-drawer-open").toggleClass("open");
-    $(".drawer-menu").toggleClass("open");
-    $("html").toggleClass("is-fixed");
-
-  });
 
 
 
-  // スムーススクロール (絶対パスのリンク先が現在のページであった場合でも作動)
+  // スムーススクロール
+  // - 同一ページ内の #hash のみ対象
+  // - 該当IDがある時だけ preventDefault してスクロール
+  $(document).on('click', 'a[href*="#"]', function (e) {
+    const hash = this.hash;
+    if (!hash || hash === '#') return;
 
-  $(document).on('click', 'a[href*="#"]', function () {
-    let time = 400;
-    let header = $('header').innerHeight();
-    let target = $(this.hash);
-    if (!target.length) return;
-    let targetY = target.offset().top - header;
+    // 同一ページ以外（外部URL+hash）は対象外
+    if (this.pathname && this.pathname !== location.pathname) return;
+
+    const $target = $(hash);
+    if (!$target.length) return;
+
+    e.preventDefault();
+
+    const time = 400;
+    const headerH = $('.p-header').outerHeight() ?? $('header').outerHeight() ?? 0;
+    const targetY = $target.offset().top - headerH;
     $('html,body').animate({ scrollTop: targetY }, time, 'swing');
-    return false;
   });
 
 });
