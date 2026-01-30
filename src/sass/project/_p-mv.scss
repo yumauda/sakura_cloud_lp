@@ -314,6 +314,9 @@
   transform: translateY(4px);
   box-shadow: none;
 }
-.js-mv-lead {
+.js-mv-lead,
+.js-mv-label,
+.p-mv__catch,
+.p-mv__btn-wrapper {
   opacity: 0;
 }
