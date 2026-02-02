@@ -32,6 +32,7 @@
 .p-point__title {
   font-size: rem(24);
   font-weight: $bold;
+  font-variation-settings: "wght" 700;
   line-height: 1.6;
   letter-spacing: 0.05em;
   color: $white;
@@ -107,6 +108,7 @@
 .p-point__panel-head-text {
   font-size: rem(20);
   font-weight: $bold;
+  font-variation-settings: "wght" 700;
   line-height: 1.6;
   letter-spacing: 0.05em;
   color: $white;
@@ -147,7 +149,8 @@
   display: grid;
   place-items: center;
   font-size: rem(28);
-  font-weight: 600;
+  font-weight: $bold;
+  font-variation-settings: "wght" 700;
   line-height: 1.5;
   letter-spacing: 0.02em;
   margin-left: auto;
@@ -158,6 +161,7 @@
 .p-point__item-title {
   font-size: rem(20);
   font-weight: $bold;
+  font-variation-settings: "wght" 700;
   line-height: 1.7;
   letter-spacing: 0.05em;
   color: #579E64;
@@ -171,6 +175,7 @@
 .p-point__item-text {
   font-size: rem(16);
   font-weight: 500;
+  font-variation-settings: "wght" 500;
   line-height: 1.75;
   letter-spacing: 0.05em;
   color: $black;

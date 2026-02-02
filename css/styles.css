@@ -306,6 +306,7 @@ select::-ms-expand {
   color: #fff;
   font-family: "MuseoModerno", system-ui, -apple-system, "Segoe UI", sans-serif;
   font-weight: 600;
+  font-variation-settings: "wght" 600;
   line-height: 1.5;
   letter-spacing: 0.02em;
   font-size: 1.25rem;
@@ -338,6 +339,7 @@ select::-ms-expand {
 
 .p-apply__step-text {
   font-weight: 500;
+  font-variation-settings: "wght" 500;
   line-height: 1.75;
   letter-spacing: 0.05em;
   color: #000;
@@ -376,6 +378,7 @@ select::-ms-expand {
   color: #000;
   letter-spacing: 0.06em;
   font-weight: 700;
+  font-variation-settings: "wght" 700;
   font-size: 1.5rem;
 }
 @media screen and (min-width: 768px) {
@@ -465,6 +468,7 @@ select::-ms-expand {
   border: 1px solid #286A36;
   font-size: 0.875rem;
   font-weight: 700;
+  font-variation-settings: "wght" 700;
   line-height: 1.6;
   letter-spacing: 0.05em;
   color: #286A36;
@@ -478,6 +482,7 @@ select::-ms-expand {
 .p-cost__note-item {
   font-size: 0.875rem;
   font-weight: 500;
+  font-variation-settings: "wght" 500;
   line-height: 1.6;
   letter-spacing: 0.05em;
   color: #000;
@@ -539,6 +544,7 @@ select::-ms-expand {
 .p-cost__step-title {
   margin: 0;
   font-weight: 700;
+  font-variation-settings: "wght" 700;
   line-height: 1.7;
   letter-spacing: 0.05em;
   text-align: center;
@@ -554,6 +560,7 @@ select::-ms-expand {
 .p-cost__step-text {
   margin: 0;
   font-weight: 500;
+  font-variation-settings: "wght" 500;
   line-height: 1.75;
   letter-spacing: 0.05em;
   text-align: center;
@@ -662,6 +669,7 @@ select::-ms-expand {
   margin-top: auto;
   font-size: 0.875rem;
   font-weight: 700;
+  font-variation-settings: "wght" 700;
   line-height: 1.6;
   letter-spacing: 0.05em;
   color: #286A36;
@@ -690,6 +698,7 @@ select::-ms-expand {
   border-radius: 0.25rem;
   font-size: 0.875rem;
   font-weight: 700;
+  font-variation-settings: "wght" 700;
   line-height: 1.6;
   letter-spacing: 0.05em;
   color: #fff;
@@ -727,6 +736,7 @@ select::-ms-expand {
   padding-left: 0.25rem;
   font-size: 0.875rem;
   font-weight: 500;
+  font-variation-settings: "wght" 500;
   line-height: 1.75;
   letter-spacing: 0.05em;
   color: #000;
@@ -768,6 +778,7 @@ select::-ms-expand {
   text-align: center;
   font-size: 1.5rem;
   font-weight: 700;
+  font-variation-settings: "wght" 700;
   line-height: 1.6;
   letter-spacing: 0.05em;
   color: #000;
@@ -829,6 +840,7 @@ select::-ms-expand {
 .p-faq__qa {
   font-family: "MuseoModerno", system-ui, -apple-system, "Segoe UI", sans-serif;
   font-weight: 600;
+  font-variation-settings: "wght" 600;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #286A36;
@@ -849,6 +861,7 @@ select::-ms-expand {
   margin: 0;
   font-size: 1rem;
   font-weight: 700;
+  font-variation-settings: "wght" 700;
   line-height: 1.75;
   letter-spacing: 0.05em;
   color: #286A36;
@@ -866,7 +879,7 @@ select::-ms-expand {
     padding-bottom: 1.5rem;
     padding-top: 1.5rem;
     padding-left: 1.5rem;
-    padding-right: 10.375rem;
+    padding-right: 10.25rem;
   }
 }
 
@@ -878,6 +891,7 @@ select::-ms-expand {
   margin: 0;
   font-size: 1rem;
   font-weight: 500;
+  font-variation-settings: "wght" 500;
   line-height: 1.75;
   letter-spacing: 0.05em;
   color: #000;
@@ -953,6 +967,7 @@ select::-ms-expand {
 .p-license__heading {
   font-size: 1.25rem;
   font-weight: 700;
+  font-variation-settings: "wght" 700;
   line-height: 1.6;
   letter-spacing: 0.05em;
   color: #000;
@@ -978,7 +993,8 @@ select::-ms-expand {
 }
 
 .p-license__text {
-  font-weight: 500 !important;
+  font-weight: 500;
+  font-variation-settings: "wght" 500;
   line-height: 1.75;
   letter-spacing: 0.05em;
   color: #000;
@@ -1035,6 +1051,7 @@ select::-ms-expand {
 
 .p-license__card-title {
   font-weight: 700;
+  font-variation-settings: "wght" 700;
   line-height: 1.7;
   letter-spacing: 0.05em;
   text-align: center;
@@ -1051,6 +1068,7 @@ select::-ms-expand {
 
 .p-license__card-text {
   font-weight: 500;
+  font-variation-settings: "wght" 500;
   line-height: 1.75;
   letter-spacing: 0.05em;
   color: #000;
@@ -1062,6 +1080,11 @@ select::-ms-expand {
     margin-top: 1rem;
     font-size: 1rem;
   }
+}
+
+.p-license__card-text span {
+  font-weight: 700;
+  font-variation-settings: "wght" 700;
 }
 
 .p-mv {
@@ -1176,7 +1199,8 @@ select::-ms-expand {
 }
 
 .p-mv__lead {
-  font-weight: 700 !important;
+  font-weight: 700;
+  font-variation-settings: "wght" 700;
   line-height: 1.75;
   letter-spacing: 0.05em;
   color: #286A36;
@@ -1208,8 +1232,10 @@ select::-ms-expand {
   border-radius: 0.5rem;
   font-size: 1.125rem;
   font-weight: 700;
+  font-variation-settings: "wght" 700;
   line-height: 1.5;
   letter-spacing: 0.05em;
+  display: block;
   color: #000;
   text-align: center;
   margin-top: 1rem;
@@ -1322,6 +1348,7 @@ select::-ms-expand {
 
 .p-mv__catch {
   font-weight: 700;
+  font-variation-settings: "wght" 700;
   letter-spacing: 0.05em;
   text-align: center;
   margin-left: auto;
@@ -1361,7 +1388,8 @@ select::-ms-expand {
   background-color: #FFDF3F;
   box-shadow: 0.5rem 0.5rem 0 rgba(0, 0, 0, 0.1);
   font-size: 1.125rem;
-  font-weight: 700 !important;
+  font-weight: 700;
+  font-variation-settings: "wght" 700;
   line-height: 1.7;
   letter-spacing: 0.05em;
   color: #000;
@@ -1473,6 +1501,7 @@ select::-ms-expand {
 .p-now__detail-title {
   font-size: 1.75rem;
   font-weight: 700;
+  font-variation-settings: "wght" 700;
   line-height: 1.6;
   letter-spacing: 0.05em;
   color: #fff;
@@ -1485,6 +1514,7 @@ select::-ms-expand {
 
 .p-now__detail-text {
   font-weight: 700;
+  font-variation-settings: "wght" 700;
   line-height: 1.75;
   letter-spacing: 0.05em;
   color: #fff;
@@ -1512,7 +1542,8 @@ select::-ms-expand {
   background-color: #FFDF3F;
   box-shadow: 0.5rem 0.5rem 0 rgba(0, 0, 0, 0.1);
   font-size: 1.25rem;
-  font-weight: 700 !important;
+  font-weight: 700;
+  font-variation-settings: "wght" 700;
   letter-spacing: 0.05em;
   color: #000;
   line-height: 1.6;
@@ -1567,6 +1598,7 @@ select::-ms-expand {
 .p-point__title {
   font-size: 1.5rem;
   font-weight: 700;
+  font-variation-settings: "wght" 700;
   line-height: 1.6;
   letter-spacing: 0.05em;
   color: #fff;
@@ -1644,6 +1676,7 @@ select::-ms-expand {
 .p-point__panel-head-text {
   font-size: 1.25rem;
   font-weight: 700;
+  font-variation-settings: "wght" 700;
   line-height: 1.6;
   letter-spacing: 0.05em;
   color: #fff;
@@ -1686,7 +1719,8 @@ select::-ms-expand {
   display: grid;
   place-items: center;
   font-size: 1.75rem;
-  font-weight: 600;
+  font-weight: 700;
+  font-variation-settings: "wght" 700;
   line-height: 1.5;
   letter-spacing: 0.02em;
   margin-left: auto;
@@ -1697,6 +1731,7 @@ select::-ms-expand {
 .p-point__item-title {
   font-size: 1.25rem;
   font-weight: 700;
+  font-variation-settings: "wght" 700;
   line-height: 1.7;
   letter-spacing: 0.05em;
   color: #579E64;
@@ -1711,6 +1746,7 @@ select::-ms-expand {
 .p-point__item-text {
   font-size: 1rem;
   font-weight: 500;
+  font-variation-settings: "wght" 500;
   line-height: 1.75;
   letter-spacing: 0.05em;
   color: #000;
@@ -1806,6 +1842,7 @@ select::-ms-expand {
 .p-site__issue-title {
   margin: 0;
   font-weight: 700;
+  font-variation-settings: "wght" 700;
   line-height: 1.7;
   letter-spacing: 0.05em;
   color: #286A36;
@@ -1839,6 +1876,7 @@ select::-ms-expand {
   gap: 0.3125rem;
   font-size: 1rem;
   font-weight: 500;
+  font-variation-settings: "wght" 500;
   line-height: 1.75;
   letter-spacing: 0.05em;
   padding-left: 0.25rem;
@@ -1883,6 +1921,7 @@ select::-ms-expand {
   align-items: center;
   gap: 1rem;
   font-weight: 700;
+  font-variation-settings: "wght" 700;
   line-height: 1.7;
   letter-spacing: 0.05em;
   border-radius: 1rem;
@@ -1926,7 +1965,8 @@ select::-ms-expand {
 
 .c-main-text {
   font-size: 0.875rem;
-  font-weight: 500 !important;
+  font-weight: 500;
+  font-variation-settings: "wght" 500;
   line-height: 1.75;
   letter-spacing: 0.05em;
   color: #000;
@@ -1957,6 +1997,7 @@ select::-ms-expand {
 .c-main-title {
   font-size: 1.5rem;
   font-weight: 700;
+  font-variation-settings: "wght" 700;
   line-height: 1.5;
   letter-spacing: 0.05em;
   color: #000;

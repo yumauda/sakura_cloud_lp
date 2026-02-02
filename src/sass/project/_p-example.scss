@@ -93,6 +93,7 @@
   margin-top: auto;
   font-size: rem(14);
   font-weight: $bold;
+  font-variation-settings: "wght" 700;
   line-height: 1.6;
   letter-spacing: 0.05em;
   color: $main-color;
@@ -107,10 +108,14 @@
   @include mq(md){
     margin-top: rem(24);
     padding-top: rem(24);
-    
+    // gap: rem(16);
   }
 }
-
+.p-example__block {
+  @include mq(md){
+    // min-height: rem(175);
+  }
+}
 .p-example__label {
   margin: 0;
   display: inline-flex;
@@ -120,6 +125,7 @@
   border-radius: rem(4);
   font-size: rem(14);
   font-weight: $bold;
+  font-variation-settings: "wght" 700;
   line-height: 1.6;
   letter-spacing: 0.05em;
   color: $white;
@@ -156,6 +162,7 @@
   padding-left: rem(4);
   font-size: rem(14);
   font-weight: 500;
+  font-variation-settings: "wght" 500;
   line-height: 1.75;
   letter-spacing: 0.05em;
   color: $black;

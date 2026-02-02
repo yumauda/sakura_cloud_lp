@@ -114,6 +114,7 @@
   color: $white;
   font-family: "MuseoModerno", system-ui, -apple-system, "Segoe UI", sans-serif;
   font-weight: 600;
+  font-variation-settings: "wght" 600;
   line-height: 1.5;
   letter-spacing: 0.02em;
   font-size: rem(20);
@@ -145,6 +146,7 @@
 
 .p-apply__step-text {
   font-weight: 500;
+  font-variation-settings: "wght" 500;
   line-height: 1.75;
   letter-spacing: 0.05em;
   color: $black;

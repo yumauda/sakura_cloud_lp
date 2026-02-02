@@ -1,5 +1,8 @@
 @use "../global" as *;
 
+.layout_main {
+
+}
 .p-mv {
   position: relative;
   background: linear-gradient(to right, #FFFFFF 0%, #CCE9D4 67%, #62BD7B 100%);
@@ -112,7 +115,8 @@
 }
 
 .p-mv__lead {
-  font-weight: 700 !important;
+  font-weight: $bold;
+  font-variation-settings: "wght" 700;
   line-height: 1.75;
   letter-spacing: 0.05em;
   color: $main-color;
@@ -144,8 +148,10 @@
   border-radius: rem(8);
   font-size: rem(18);
   font-weight: $bold;
+  font-variation-settings: "wght" 700;
   line-height: 1.5;
   letter-spacing: 0.05em;
+  display: block;
   color: $black;
   text-align: center;
   margin-top: rem(16);
@@ -253,6 +259,7 @@
 
 .p-mv__catch {
   font-weight: $bold;
+  font-variation-settings: "wght" 700;
   letter-spacing: 0.05em;
   text-align: center;
   margin-left: auto;
@@ -292,7 +299,8 @@
   background-color: $accent-color;
   box-shadow: rem(8) rem(8) 0 rgba(0, 0, 0, 0.1);
   font-size: rem(18);
-  font-weight: 700 !important;
+  font-weight: $bold;
+  font-variation-settings: "wght" 700;
   line-height: 1.7;
   letter-spacing: 0.05em;
   color: $black;

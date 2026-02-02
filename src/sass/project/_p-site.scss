@@ -78,6 +78,7 @@
 .p-site__issue-title {
   margin: 0;
   font-weight: $bold;
+  font-variation-settings: "wght" 700;
   line-height: 1.7;
   letter-spacing: 0.05em;
   color: $main-color;
@@ -110,6 +111,7 @@
   gap: rem(5);
   font-size: rem(16);
   font-weight: 500;
+  font-variation-settings: "wght" 500;
   line-height: 1.75;
   letter-spacing: 0.05em;
   padding-left: rem(4);
@@ -148,6 +150,7 @@
   align-items: center;
   gap: rem(16);
   font-weight: $bold;
+  font-variation-settings: "wght" 700;
   line-height: 1.7;
   letter-spacing: 0.05em;
   border-radius: rem(16);

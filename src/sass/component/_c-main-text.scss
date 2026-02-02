@@ -2,7 +2,8 @@
 
 .c-main-text {
   font-size: rem(14);
-  font-weight: 500 !important;
+  font-weight: 500;
+  font-variation-settings: "wght" 500;
   line-height: 1.75;
   letter-spacing: 0.05em;
   color: $black;

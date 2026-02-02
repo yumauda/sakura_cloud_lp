@@ -13,6 +13,7 @@
   text-align: center;
   font-size: rem(24);
   font-weight: $bold;
+  font-variation-settings: "wght" 700;
   line-height: 1.6;
   letter-spacing: 0.05em;
   color: $black;
@@ -73,6 +74,7 @@
 .p-faq__qa {
   font-family: "MuseoModerno", system-ui, -apple-system, "Segoe UI", sans-serif;
   font-weight: 600;
+  font-variation-settings: "wght" 600;
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: $main-color;
@@ -93,6 +95,7 @@
   margin: 0;
   font-size: rem(16);
   font-weight: $bold;
+  font-variation-settings: "wght" 700;
   line-height: 1.75;
   letter-spacing: 0.05em;
   color: $main-color;
@@ -109,7 +112,7 @@
     padding-bottom: rem(24);
     padding-top: rem(24);
     padding-left: rem(24);
-    padding-right: rem(166);
+    padding-right: rem(164);
 
   }
 }
@@ -122,6 +125,7 @@
   margin: 0;
   font-size: rem(16);
   font-weight: 500;
+  font-variation-settings: "wght" 500;
   line-height: 1.75;
   letter-spacing: 0.05em;
   color: $black;
