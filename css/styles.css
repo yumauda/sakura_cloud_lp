@@ -1157,7 +1157,7 @@ select::-ms-expand {
     margin-right: initial;
     margin-top: initial;
     flex: 1;
-    margin-right: -2.5rem;
+    margin-right: -4.375rem;
   }
 }
 
@@ -1248,7 +1248,7 @@ select::-ms-expand {
     padding: 0.25rem 1.5rem;
     margin-top: 1.5rem;
     font-size: 2.5rem;
-    width: initial;
+    width: fit-content;
     margin-left: initial;
     margin-right: initial;
     white-space: nowrap;
@@ -1418,6 +1418,11 @@ select::-ms-expand {
 .p-mv__catch,
 .p-mv__btn-wrapper {
   opacity: 0;
+}
+
+.p-mv__main {
+  display: block;
+  white-space: nowrap;
 }
 
 .p-now {
